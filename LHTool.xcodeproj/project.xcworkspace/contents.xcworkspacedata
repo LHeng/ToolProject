@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:ToolProject.xcodeproj">
+      location = "self:/Users/cool/Downloads/&#x53ca;&#x65f6;&#x5de5;&#x5177;/ToolProject/LHTool.xcodeproj">
    </FileRef>
 </Workspace>
