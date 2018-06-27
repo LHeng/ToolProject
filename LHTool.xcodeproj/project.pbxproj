@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7E70F54A2071D39800A1E66E /* String+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E70F5492071D39800A1E66E /* String+Category.swift */; };
+		7E84F66E20E210BE00DE337F /* LHPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E84F66D20E210BE00DE337F /* LHPickerView.swift */; };
 		7EE903E2206F28A10051E41A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE903E1206F28A10051E41A /* AppDelegate.swift */; };
 		7EE903E4206F28A10051E41A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE903E3206F28A10051E41A /* ViewController.swift */; };
 		7EE903E7206F28A10051E41A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EE903E5206F28A10051E41A /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		7E70F5492071D39800A1E66E /* String+Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Category.swift"; sourceTree = "<group>"; };
+		7E84F66D20E210BE00DE337F /* LHPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LHPickerView.swift; sourceTree = "<group>"; };
 		7EE903DE206F28A10051E41A /* LHTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LHTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EE903E1206F28A10051E41A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7EE903E3206F28A10051E41A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				7EE903FC206F38300051E41A /* UIImage+Category.swift */,
 				7E70F5492071D39800A1E66E /* String+Category.swift */,
 				7EF91EB020D20A4400774737 /* LHHUBViewController.swift */,
+				7E84F66D20E210BE00DE337F /* LHPickerView.swift */,
 			);
 			path = tool;
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 				7EE903F7206F2F910051E41A /* UIView+Category.swift in Sources */,
 				7EE903FB206F36370051E41A /* UILabel+Category.swift in Sources */,
 				7EF91EB120D20A4400774737 /* LHHUBViewController.swift in Sources */,
+				7E84F66E20E210BE00DE337F /* LHPickerView.swift in Sources */,
 				7EE903E2206F28A10051E41A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

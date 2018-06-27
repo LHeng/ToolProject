@@ -12,6 +12,13 @@ typealias Block = (_ type : Int ) -> ()
 
 class LHHUBViewController: NSObject {
     
+    /// 提示弹框
+    ///
+    /// - Parameters:
+    ///   - VC: 显示的视图
+    ///   - title: 主题
+    ///   - message: 信息
+    ///   - block: 按钮回调
     func alertView(VC:UIViewController,title:String,message:String,block: Block?)  {
         let alertVC : UIAlertController = UIAlertController.init(title: title, message: message, preferredStyle: .alert)
         
@@ -28,6 +35,13 @@ class LHHUBViewController: NSObject {
     }
 
     
+    /// 选择图片
+    ///
+    /// - Parameters:
+    ///   - VC: 显示的视图
+    ///   - title: 主题
+    ///   - message: 信息
+    ///   - block: 按钮回调
     func actionSheetView(VC:UIViewController,title:String,message:String,block: Block?)  {
         let alertVC : UIAlertController = UIAlertController.init(title: title, message: message, preferredStyle: .actionSheet)
         
