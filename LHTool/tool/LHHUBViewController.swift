@@ -33,7 +33,7 @@ class LHHUBViewController: NSObject {
         alertVC.addAction(action2)
         VC.present(alertVC, animated: true, completion: nil)
     }
-
+    
     
     /// 选择图片
     ///
@@ -42,7 +42,7 @@ class LHHUBViewController: NSObject {
     ///   - title: 主题
     ///   - message: 信息
     ///   - block: 按钮回调
-    func actionSheetView(VC:UIViewController,title:String,message:String,block: Block?)  {
+    func actionSheetView(vc:UIViewController,title:String,message:String,block: Block?)  {
         let alertVC : UIAlertController = UIAlertController.init(title: title, message: message, preferredStyle: .actionSheet)
         
         let action1 = UIAlertAction.init(title: "拍照", style: .default) { (action) in
@@ -61,7 +61,7 @@ class LHHUBViewController: NSObject {
         alertVC.addAction(action1)
         alertVC.addAction(action2)
         alertVC.addAction(action3)
-        VC.present(alertVC, animated: true, completion: nil)
+        vc.present(alertVC, animated: true, completion: nil)
     }
-    
 }
+

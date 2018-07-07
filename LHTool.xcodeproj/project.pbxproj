@@ -8,7 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		7E70F54A2071D39800A1E66E /* String+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E70F5492071D39800A1E66E /* String+Category.swift */; };
+		7E73F39120E4791E00CFA222 /* LHBaseHttps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E73F39020E4791E00CFA222 /* LHBaseHttps.swift */; };
+		7E73F39320E47F2200CFA222 /* LHRequseTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E73F39220E47F2200CFA222 /* LHRequseTool.swift */; };
 		7E84F66E20E210BE00DE337F /* LHPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E84F66D20E210BE00DE337F /* LHPickerView.swift */; };
+		7E91C1EB20EF6EA400A9DF7B /* HUD+Add.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E91C1EA20EF6EA400A9DF7B /* HUD+Add.swift */; };
 		7EE903E2206F28A10051E41A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE903E1206F28A10051E41A /* AppDelegate.swift */; };
 		7EE903E4206F28A10051E41A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE903E3206F28A10051E41A /* ViewController.swift */; };
 		7EE903E7206F28A10051E41A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EE903E5206F28A10051E41A /* Main.storyboard */; };
@@ -20,11 +23,16 @@
 		7EE903FB206F36370051E41A /* UILabel+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE903FA206F36370051E41A /* UILabel+Category.swift */; };
 		7EE903FD206F38300051E41A /* UIImage+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE903FC206F38300051E41A /* UIImage+Category.swift */; };
 		7EF91EB120D20A4400774737 /* LHHUBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF91EB020D20A4400774737 /* LHHUBViewController.swift */; };
+		A2501614FE7C6616AA7A759A /* Pods_LHTool.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F310105452C8F73C2BA6D40A /* Pods_LHTool.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7E70F5492071D39800A1E66E /* String+Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Category.swift"; sourceTree = "<group>"; };
+		7E73F39020E4791E00CFA222 /* LHBaseHttps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LHBaseHttps.swift; sourceTree = "<group>"; };
+		7E73F39220E47F2200CFA222 /* LHRequseTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LHRequseTool.swift; sourceTree = "<group>"; };
 		7E84F66D20E210BE00DE337F /* LHPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LHPickerView.swift; sourceTree = "<group>"; };
+		7E91C1E620EF5F3C00A9DF7B /* LHTool-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LHTool-Bridging-Header.h"; sourceTree = "<group>"; };
+		7E91C1EA20EF6EA400A9DF7B /* HUD+Add.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HUD+Add.swift"; sourceTree = "<group>"; };
 		7EE903DE206F28A10051E41A /* LHTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LHTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EE903E1206F28A10051E41A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7EE903E3206F28A10051E41A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -38,6 +46,9 @@
 		7EE903FA206F36370051E41A /* UILabel+Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Category.swift"; sourceTree = "<group>"; };
 		7EE903FC206F38300051E41A /* UIImage+Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Category.swift"; sourceTree = "<group>"; };
 		7EF91EB020D20A4400774737 /* LHHUBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LHHUBViewController.swift; sourceTree = "<group>"; };
+		91636AD3AFC4EC94B169FE87 /* Pods-LHTool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LHTool.release.xcconfig"; path = "Pods/Target Support Files/Pods-LHTool/Pods-LHTool.release.xcconfig"; sourceTree = "<group>"; };
+		EB5AE5A1AB8F81549AFCD8D6 /* Pods-LHTool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LHTool.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LHTool/Pods-LHTool.debug.xcconfig"; sourceTree = "<group>"; };
+		F310105452C8F73C2BA6D40A /* Pods_LHTool.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LHTool.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,17 +56,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2501614FE7C6616AA7A759A /* Pods_LHTool.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		062AB581DEFB59E16A7F9B3D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EB5AE5A1AB8F81549AFCD8D6 /* Pods-LHTool.debug.xcconfig */,
+				91636AD3AFC4EC94B169FE87 /* Pods-LHTool.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		7EE903D5206F28A00051E41A = {
 			isa = PBXGroup;
 			children = (
 				7EE903E0206F28A10051E41A /* LHTool */,
 				7EE903DF206F28A10051E41A /* Products */,
+				062AB581DEFB59E16A7F9B3D /* Pods */,
+				C7622074AA6304F82091A56B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -91,9 +114,21 @@
 				7EE903FC206F38300051E41A /* UIImage+Category.swift */,
 				7E70F5492071D39800A1E66E /* String+Category.swift */,
 				7EF91EB020D20A4400774737 /* LHHUBViewController.swift */,
+				7E91C1EA20EF6EA400A9DF7B /* HUD+Add.swift */,
 				7E84F66D20E210BE00DE337F /* LHPickerView.swift */,
+				7E73F39020E4791E00CFA222 /* LHBaseHttps.swift */,
+				7E73F39220E47F2200CFA222 /* LHRequseTool.swift */,
+				7E91C1E620EF5F3C00A9DF7B /* LHTool-Bridging-Header.h */,
 			);
 			path = tool;
+			sourceTree = "<group>";
+		};
+		C7622074AA6304F82091A56B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F310105452C8F73C2BA6D40A /* Pods_LHTool.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -103,9 +138,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7EE903F0206F28A50051E41A /* Build configuration list for PBXNativeTarget "LHTool" */;
 			buildPhases = (
+				55BA9E0411B9A69538025D49 /* [CP] Check Pods Manifest.lock */,
 				7EE903DA206F28A10051E41A /* Sources */,
 				7EE903DB206F28A10051E41A /* Frameworks */,
 				7EE903DC206F28A10051E41A /* Resources */,
+				5707FF454949801D3A036F3D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -128,6 +165,7 @@
 				TargetAttributes = {
 					7EE903DD206F28A10051E41A = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0940;
 					};
 				};
 			};
@@ -162,19 +200,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		55BA9E0411B9A69538025D49 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LHTool-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5707FF454949801D3A036F3D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-LHTool/Pods-LHTool-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LHTool/Pods-LHTool-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7EE903DA206F28A10051E41A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E73F39320E47F2200CFA222 /* LHRequseTool.swift in Sources */,
 				7E70F54A2071D39800A1E66E /* String+Category.swift in Sources */,
 				7EE903F5206F29A10051E41A /* UIColor+Category.swift in Sources */,
+				7E91C1EB20EF6EA400A9DF7B /* HUD+Add.swift in Sources */,
 				7EE903F9206F33ED0051E41A /* UIButton+Category.swift in Sources */,
 				7EE903E4206F28A10051E41A /* ViewController.swift in Sources */,
 				7EE903FD206F38300051E41A /* UIImage+Category.swift in Sources */,
 				7EE903F7206F2F910051E41A /* UIView+Category.swift in Sources */,
 				7EE903FB206F36370051E41A /* UILabel+Category.swift in Sources */,
 				7EF91EB120D20A4400774737 /* LHHUBViewController.swift in Sources */,
+				7E73F39120E4791E00CFA222 /* LHBaseHttps.swift in Sources */,
 				7E84F66E20E210BE00DE337F /* LHPickerView.swift in Sources */,
 				7EE903E2206F28A10051E41A /* AppDelegate.swift in Sources */,
 			);
@@ -318,10 +400,13 @@
 		};
 		7EE903F1206F28A50051E41A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB5AE5A1AB8F81549AFCD8D6 /* Pods-LHTool.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 53W5B343QL;
+				HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 				INFOPLIST_FILE = LHTool/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -329,17 +414,23 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.liuheng.tool.LHTool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LHTool/tool/LHTool-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 			};
 			name = Debug;
 		};
 		7EE903F2206F28A50051E41A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91636AD3AFC4EC94B169FE87 /* Pods-LHTool.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 53W5B343QL;
+				HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 				INFOPLIST_FILE = LHTool/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -347,8 +438,10 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.liuheng.tool.LHTool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LHTool/tool/LHTool-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 			};
 			name = Release;
 		};
