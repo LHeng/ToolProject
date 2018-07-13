@@ -154,9 +154,7 @@ class LHPickerView: UIView,UIPickerViewDelegate,UIPickerViewDataSource {
         if let _ = dateblock {
             dateblock(datePicker.date)
         }
-        
         hideView()
-     
     }
     
     //显示

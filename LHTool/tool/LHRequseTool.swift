@@ -22,15 +22,12 @@ class LHRequseTool: NSObject {
             } else {
                 
                 //解析数据
-                //let cityList = Mapper<SSCityModel>().mapArray(JSONArray: respones as! [[String : Any]])
-                
-                //success(cityList!)
+                //success(数组)
                 
             }
             
         }) { (error) in
-            print(error)
+            failure(error)
         }
-        
     }
 }
