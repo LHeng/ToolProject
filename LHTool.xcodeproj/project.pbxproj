@@ -11,6 +11,8 @@
 		7E73F39120E4791E00CFA222 /* LHBaseHttps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E73F39020E4791E00CFA222 /* LHBaseHttps.swift */; };
 		7E73F39320E47F2200CFA222 /* LHRequseTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E73F39220E47F2200CFA222 /* LHRequseTool.swift */; };
 		7E84F66E20E210BE00DE337F /* LHPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E84F66D20E210BE00DE337F /* LHPickerView.swift */; };
+		7E8E57D320F89EB300998A38 /* LHQRCodeTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8E57D220F89EB300998A38 /* LHQRCodeTool.swift */; };
+		7E8E57D520F8A5C800998A38 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E8E57D420F8A5C700998A38 /* CoreGraphics.framework */; };
 		7E91C1EB20EF6EA400A9DF7B /* HUD+Add.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E91C1EA20EF6EA400A9DF7B /* HUD+Add.swift */; };
 		7EE903E2206F28A10051E41A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE903E1206F28A10051E41A /* AppDelegate.swift */; };
 		7EE903E4206F28A10051E41A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE903E3206F28A10051E41A /* ViewController.swift */; };
@@ -31,6 +33,8 @@
 		7E73F39020E4791E00CFA222 /* LHBaseHttps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LHBaseHttps.swift; sourceTree = "<group>"; };
 		7E73F39220E47F2200CFA222 /* LHRequseTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LHRequseTool.swift; sourceTree = "<group>"; };
 		7E84F66D20E210BE00DE337F /* LHPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LHPickerView.swift; sourceTree = "<group>"; };
+		7E8E57D220F89EB300998A38 /* LHQRCodeTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LHQRCodeTool.swift; sourceTree = "<group>"; };
+		7E8E57D420F8A5C700998A38 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		7E91C1E620EF5F3C00A9DF7B /* LHTool-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LHTool-Bridging-Header.h"; sourceTree = "<group>"; };
 		7E91C1EA20EF6EA400A9DF7B /* HUD+Add.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HUD+Add.swift"; sourceTree = "<group>"; };
 		7EE903DE206F28A10051E41A /* LHTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LHTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E8E57D520F8A5C800998A38 /* CoreGraphics.framework in Frameworks */,
 				A2501614FE7C6616AA7A759A /* Pods_LHTool.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -118,6 +123,7 @@
 				7E84F66D20E210BE00DE337F /* LHPickerView.swift */,
 				7E73F39020E4791E00CFA222 /* LHBaseHttps.swift */,
 				7E73F39220E47F2200CFA222 /* LHRequseTool.swift */,
+				7E8E57D220F89EB300998A38 /* LHQRCodeTool.swift */,
 				7E91C1E620EF5F3C00A9DF7B /* LHTool-Bridging-Header.h */,
 			);
 			path = tool;
@@ -126,6 +132,7 @@
 		C7622074AA6304F82091A56B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7E8E57D420F8A5C700998A38 /* CoreGraphics.framework */,
 				F310105452C8F73C2BA6D40A /* Pods_LHTool.framework */,
 			);
 			name = Frameworks;
@@ -249,6 +256,7 @@
 				7E73F39320E47F2200CFA222 /* LHRequseTool.swift in Sources */,
 				7E70F54A2071D39800A1E66E /* String+Category.swift in Sources */,
 				7EE903F5206F29A10051E41A /* UIColor+Category.swift in Sources */,
+				7E8E57D320F89EB300998A38 /* LHQRCodeTool.swift in Sources */,
 				7E91C1EB20EF6EA400A9DF7B /* HUD+Add.swift in Sources */,
 				7EE903F9206F33ED0051E41A /* UIButton+Category.swift in Sources */,
 				7EE903E4206F28A10051E41A /* ViewController.swift in Sources */,
