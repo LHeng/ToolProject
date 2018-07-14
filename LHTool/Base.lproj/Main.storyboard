@@ -19,54 +19,68 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hQP-v4-LY2">
-                                <rect key="frame" x="172" y="470" width="31" height="30"/>
+                                <rect key="frame" x="172" y="440" width="31" height="30"/>
                                 <state key="normal" title="日期"/>
                                 <connections>
                                     <action selector="date:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uOc-7V-7CH"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="11A-5J-tSH">
-                                <rect key="frame" x="171.5" y="390" width="31" height="30"/>
+                                <rect key="frame" x="171.5" y="360" width="31" height="30"/>
                                 <state key="normal" title="单选"/>
                                 <connections>
                                     <action selector="sele:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WBR-bR-m9W"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j6R-jL-G4H">
-                                <rect key="frame" x="172" y="550" width="31" height="30"/>
+                                <rect key="frame" x="172" y="520" width="31" height="30"/>
                                 <state key="normal" title="时间"/>
                                 <connections>
                                     <action selector="time:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eNu-Z0-Wm7"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zOq-pj-WNe">
-                                <rect key="frame" x="141" y="230" width="92" height="30"/>
+                                <rect key="frame" x="141" y="200" width="92" height="30"/>
                                 <state key="normal" title="成功信息弹框"/>
                                 <connections>
                                     <action selector="showSuccess:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NlE-Lv-M1E"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zG3-y9-Pro">
-                                <rect key="frame" x="141" y="150" width="92" height="30"/>
+                                <rect key="frame" x="141" y="120" width="92" height="30"/>
                                 <state key="normal" title="错误信息弹框"/>
                                 <connections>
                                     <action selector="showError:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8xF-ow-IJv"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mLS-PM-67h">
-                                <rect key="frame" x="156" y="70" width="62" height="30"/>
+                                <rect key="frame" x="156" y="40" width="62" height="30"/>
                                 <state key="normal" title="加载弹框"/>
                                 <connections>
                                     <action selector="showLoading:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GEZ-sq-LtL"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lEL-S7-9sl">
-                                <rect key="frame" x="141" y="310" width="92" height="30"/>
+                                <rect key="frame" x="141" y="280" width="92" height="30"/>
                                 <state key="normal" title="提醒信息弹框"/>
                                 <connections>
                                     <action selector="showMessge:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pEF-sZ-d4I"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bjm-Pj-Pl2">
+                                <rect key="frame" x="164.5" y="600" width="46" height="30"/>
+                                <state key="normal" title="二维码"/>
+                                <connections>
+                                    <action selector="showQRCode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f7c-4i-P5z"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rtk-8f-XSV">
+                                <rect key="frame" x="87" y="233" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="35C-KK-mYG"/>
+                                    <constraint firstAttribute="width" constant="200" id="UFw-Ou-iAO"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -75,18 +89,25 @@
                             <constraint firstItem="zG3-y9-Pro" firstAttribute="centerX" secondItem="mLS-PM-67h" secondAttribute="centerX" id="3If-ce-cD4"/>
                             <constraint firstItem="11A-5J-tSH" firstAttribute="centerX" secondItem="lEL-S7-9sl" secondAttribute="centerX" id="8D6-Wd-Xbd"/>
                             <constraint firstItem="j6R-jL-G4H" firstAttribute="centerX" secondItem="hQP-v4-LY2" secondAttribute="centerX" id="8nk-Gh-F99"/>
+                            <constraint firstItem="bjm-Pj-Pl2" firstAttribute="top" secondItem="j6R-jL-G4H" secondAttribute="bottom" constant="50" id="GYW-UF-I2W"/>
                             <constraint firstItem="lEL-S7-9sl" firstAttribute="top" secondItem="zOq-pj-WNe" secondAttribute="bottom" constant="50" id="Lb5-85-J0a"/>
                             <constraint firstItem="lEL-S7-9sl" firstAttribute="centerX" secondItem="zOq-pj-WNe" secondAttribute="centerX" id="R6S-0F-QgP"/>
                             <constraint firstItem="zOq-pj-WNe" firstAttribute="top" secondItem="zG3-y9-Pro" secondAttribute="bottom" constant="50" id="Rn9-Zt-DnM"/>
+                            <constraint firstItem="rtk-8f-XSV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Syk-rs-Qa9"/>
                             <constraint firstItem="zG3-y9-Pro" firstAttribute="top" secondItem="mLS-PM-67h" secondAttribute="bottom" constant="50" id="abI-on-v8x"/>
-                            <constraint firstItem="mLS-PM-67h" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="hVr-NM-Upd"/>
+                            <constraint firstItem="rtk-8f-XSV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ceo-0H-VM7"/>
+                            <constraint firstItem="mLS-PM-67h" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="hVr-NM-Upd"/>
                             <constraint firstItem="zOq-pj-WNe" firstAttribute="centerX" secondItem="zG3-y9-Pro" secondAttribute="centerX" id="qdr-3H-Gc2"/>
                             <constraint firstItem="11A-5J-tSH" firstAttribute="top" secondItem="lEL-S7-9sl" secondAttribute="bottom" constant="50" id="sBc-du-4g3"/>
+                            <constraint firstItem="bjm-Pj-Pl2" firstAttribute="centerX" secondItem="j6R-jL-G4H" secondAttribute="centerX" id="scL-6Z-3nR"/>
                             <constraint firstItem="hQP-v4-LY2" firstAttribute="top" secondItem="11A-5J-tSH" secondAttribute="bottom" constant="50" id="uar-I2-uvf"/>
                             <constraint firstItem="j6R-jL-G4H" firstAttribute="top" secondItem="hQP-v4-LY2" secondAttribute="bottom" constant="50" id="xiR-S8-XIU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="imageQRCode" destination="rtk-8f-XSV" id="8p0-Ma-mfh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

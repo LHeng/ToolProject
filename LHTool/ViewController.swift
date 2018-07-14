@@ -10,8 +10,17 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var imageQRCode: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        imageQRCode.isHidden = true
+        let touch = UITapGestureRecognizer.init(target: self, action: #selector(touchEvent))
+        view.addGestureRecognizer(touch)
+    }
+    
+    @objc  func touchEvent() {
+        imageQRCode.isHidden = true
     }
 
     @IBAction func date(_ sender: Any) {
@@ -73,6 +82,10 @@ class ViewController: UIViewController {
                 HUD?.hideHUDForView(vc: self.view)
             })
         }
+    }
+    @IBAction func showQRCode(_ sender: Any) {
+        imageQRCode.image = LHQRCodeTool().createQRCode(data: "你该吃药了", imageViewWidth: 200)
+        imageQRCode.isHidden = false
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
