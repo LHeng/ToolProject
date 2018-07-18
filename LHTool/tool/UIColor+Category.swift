@@ -10,7 +10,7 @@ import UIKit
 
 extension UIColor {
     enum karcolor {
-        case mainBGColor
+        case mainBGColor//主题颜色(可随意修改)
         case karRed
         case karRedPress
         case karPink

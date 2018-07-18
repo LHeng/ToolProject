@@ -22,9 +22,9 @@ class ViewController: UIViewController {
     @objc  func touchEvent() {
         imageQRCode.isHidden = true
     }
-
+    
     @IBAction func date(_ sender: Any) {
-       let alert = LHPickerView.init(frame: self.view.bounds, type: .date)
+        let alert = LHPickerView.init(frame: self.view.bounds, type: .date)
         alert.alpha = 0
         UIApplication.shared.keyWindow?.addSubview(alert)
         alert.dateblock = {(date) in
@@ -36,6 +36,7 @@ class ViewController: UIViewController {
         }
         alert.showInView()
     }
+    
     @IBAction func sele(_ sender: Any) {
         let alert = LHPickerView.init(frame: self.view.bounds, type: .selector)
         alert.dataList = ["男","女"]
@@ -56,10 +57,11 @@ class ViewController: UIViewController {
             let dateFormater = DateFormatter()
             dateFormater.dateFormat = "HH:mm:ss"
             let result = dateFormater.string(from: select)
-            print("---\(result)")        }
+            print("---\(result)")
+        }
         alert.showInView()
-   
     }
+    
     @IBAction func showError(_ sender: Any) {
         MBProgressHUD().showError(error: "失败了")
     }
@@ -74,7 +76,6 @@ class ViewController: UIViewController {
     
     @IBAction func showLoading(_ sender: Any) {
         let HUD =  MBProgressHUD().showMessage( message: "加载中...",view: view)
-        
         let delaQueue = DispatchQueue.init(label: "com.syc.nd", qos: .userInteractive)
         let delayTime : DispatchTimeInterval = .seconds(3)
         delaQueue.asyncAfter(deadline: .now() + delayTime) {
@@ -83,13 +84,16 @@ class ViewController: UIViewController {
             })
         }
     }
+    
     @IBAction func showQRCode(_ sender: Any) {
         imageQRCode.image = LHQRCodeTool().createQRCode(data: "你该吃药了", imageViewWidth: 200)
         imageQRCode.isHidden = false
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 }
+
 
