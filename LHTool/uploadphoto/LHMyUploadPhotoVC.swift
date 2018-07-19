@@ -29,7 +29,7 @@ class LHMyUploadPhotoVC: LHBaseViewController {
     }
 }
 
-extension LHMyUploadPhotoVC: UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,TZImagePickerControllerDelegate {
+extension LHMyUploadPhotoVC: UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,UIImagePickerControllerDelegate,UINavigationControllerDelegate,TZImagePickerControllerDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return images.count + 1
     }
@@ -52,7 +52,7 @@ extension LHMyUploadPhotoVC: UICollectionViewDelegate,UICollectionViewDataSource
         cell.myblock = {(index)in
             print(index)
             self.images.remove(at: index)
-            collectionView.reloadData()
+            self.myCollectionView.reloadData()
         }
         return cell
     }
@@ -79,7 +79,7 @@ extension LHMyUploadPhotoVC: UICollectionViewDelegate,UICollectionViewDataSource
                     for pi in c.items {
                         self.images.append(pi.image!)
                     }
-                    collectionView.reloadData()
+                    self.myCollectionView.reloadData()
                 }
                 self.navigationController?.pushViewController(vc, animated: true)
             }
@@ -92,6 +92,10 @@ extension LHMyUploadPhotoVC: UICollectionViewDelegate,UICollectionViewDataSource
         LHHUBViewController().actionSheetView(vc: self, title: nil, message: nil, action: ["拍照","手机相册"]) { (index) in
             switch index {
             case 0:
+                let pick:UIImagePickerController = UIImagePickerController()
+                pick.delegate = self
+                pick.sourceType = UIImagePickerControllerSourceType.camera
+                self.present(pick, animated: true, completion: nil)
                 break;
             case 1:
                 let vc =  TZImagePickerController.init(maxImagesCount: 9, delegate: self)
@@ -101,6 +105,18 @@ extension LHMyUploadPhotoVC: UICollectionViewDelegate,UICollectionViewDataSource
                 break
             }
         }
+    }
+    
+    //MARK: - UIImagePickerControllerDelegate
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        picker.dismiss(animated: true, completion: nil)
+        let image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        images.append(image!)
+        myCollectionView.reloadData()
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController){
+        picker.dismiss(animated: true, completion: nil)
     }
     
     //MARK: - TZImagePickerControllerDelegate

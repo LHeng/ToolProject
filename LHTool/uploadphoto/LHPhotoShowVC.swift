@@ -11,7 +11,6 @@ import UIKit
 class PhotoItem: NSObject {
     var image:UIImage?
     var srcUrl: String?
-    var thumbUrl: String?
 }
 class LHPhotoShowVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, ScalableImageViewDelegate {
     
@@ -21,7 +20,7 @@ class LHPhotoShowVC: UIViewController, UICollectionViewDataSource, UICollectionV
     var currentIndex = 0
     /** Data source 1: Photo Items */
     var items =  [PhotoItem]()
-    /** Data source 2: Url Items */
+    /** Data source 2*/
     var _urlItems: [String]?
     var _photoItems: [UIImage]?
     /** Delete done callback if has deleted some photos */
