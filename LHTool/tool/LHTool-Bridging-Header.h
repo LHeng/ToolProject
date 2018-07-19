@@ -3,3 +3,5 @@
 //
 
 #import "MBProgressHUD.h"
+#import "TZImagePickerController.h"
+#import <SDWebImage/UIImageView+WebCache.h>

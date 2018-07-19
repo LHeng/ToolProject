@@ -19,7 +19,7 @@ class LHHUBViewController: NSObject {
     ///   - title: 主题
     ///   - message: 信息
     ///   - block: 按钮回调
-    func alertView(VC:UIViewController,title:String,message:String,block: Block?)  {
+    func alertView(VC:UIViewController,title:String?,message:String?,block: Block?)  {
         let alertVC : UIAlertController = UIAlertController.init(title: title, message: message, preferredStyle: .alert)
         
         let action1 = UIAlertAction.init(title: "确认", style: .default) { (action) in
@@ -42,7 +42,7 @@ class LHHUBViewController: NSObject {
     ///   - title: 主题
     ///   - message: 信息
     ///   - block: 按钮回调
-    func actionSheetView(vc:UIViewController,title:String,message:String,block: Block?)  {
+    func actionSheetView(vc:UIViewController,title:String?,message:String?,block: Block?)  {
         let alertVC : UIAlertController = UIAlertController.init(title: title, message: message, preferredStyle: .actionSheet)
         
         let action1 = UIAlertAction.init(title: "拍照", style: .default) { (action) in

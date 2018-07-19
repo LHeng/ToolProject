@@ -18,6 +18,10 @@
 		7E9D42C520FED3BB00893393 /* LHMoreChooseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9D42C420FED3BB00893393 /* LHMoreChooseVC.swift */; };
 		7E9D42C720FED4AA00893393 /* LHMyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9D42C620FED4AA00893393 /* LHMyTableViewCell.swift */; };
 		7E9D42CB20FEF05900893393 /* LHMyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E9D42CA20FEF05900893393 /* LHMyTableViewCell.xib */; };
+		7E9D42CD20FF33E900893393 /* LHMyUploadPhotoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9D42CC20FF33E900893393 /* LHMyUploadPhotoVC.swift */; };
+		7EA27A7C2100312200A65094 /* LHMyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA27A7B2100312200A65094 /* LHMyCollectionViewCell.swift */; };
+		7EA27A7E2100664C00A65094 /* LHPhotoShowVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA27A7D2100664C00A65094 /* LHPhotoShowVC.swift */; };
+		7EA27A802100797300A65094 /* LHBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA27A7F2100797300A65094 /* LHBaseViewController.swift */; };
 		7EE903E2206F28A10051E41A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE903E1206F28A10051E41A /* AppDelegate.swift */; };
 		7EE903E4206F28A10051E41A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE903E3206F28A10051E41A /* ViewController.swift */; };
 		7EE903E7206F28A10051E41A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EE903E5206F28A10051E41A /* Main.storyboard */; };
@@ -45,6 +49,10 @@
 		7E9D42C420FED3BB00893393 /* LHMoreChooseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LHMoreChooseVC.swift; sourceTree = "<group>"; };
 		7E9D42C620FED4AA00893393 /* LHMyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LHMyTableViewCell.swift; sourceTree = "<group>"; };
 		7E9D42CA20FEF05900893393 /* LHMyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LHMyTableViewCell.xib; sourceTree = "<group>"; };
+		7E9D42CC20FF33E900893393 /* LHMyUploadPhotoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LHMyUploadPhotoVC.swift; sourceTree = "<group>"; };
+		7EA27A7B2100312200A65094 /* LHMyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LHMyCollectionViewCell.swift; sourceTree = "<group>"; };
+		7EA27A7D2100664C00A65094 /* LHPhotoShowVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LHPhotoShowVC.swift; sourceTree = "<group>"; };
+		7EA27A7F2100797300A65094 /* LHBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LHBaseViewController.swift; sourceTree = "<group>"; };
 		7EE903DE206F28A10051E41A /* LHTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LHTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EE903E1206F28A10051E41A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7EE903E3206F28A10051E41A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +93,16 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		7EA27A7A2100248F00A65094 /* uploadphoto */ = {
+			isa = PBXGroup;
+			children = (
+				7E9D42CC20FF33E900893393 /* LHMyUploadPhotoVC.swift */,
+				7EA27A7D2100664C00A65094 /* LHPhotoShowVC.swift */,
+				7EA27A7B2100312200A65094 /* LHMyCollectionViewCell.swift */,
+			);
+			path = uploadphoto;
+			sourceTree = "<group>";
+		};
 		7EE903D5206F28A00051E41A = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +124,7 @@
 		7EE903E0206F28A10051E41A /* LHTool */ = {
 			isa = PBXGroup;
 			children = (
+				7EA27A7A2100248F00A65094 /* uploadphoto */,
 				7EE903F3206F28BC0051E41A /* tool */,
 				7EE903E1206F28A10051E41A /* AppDelegate.swift */,
 				7EE903E3206F28A10051E41A /* ViewController.swift */,
@@ -137,6 +156,7 @@
 				7E73F39220E47F2200CFA222 /* LHRequseTool.swift */,
 				7E8E57D220F89EB300998A38 /* LHQRCodeTool.swift */,
 				7E91C1E620EF5F3C00A9DF7B /* LHTool-Bridging-Header.h */,
+				7EA27A7F2100797300A65094 /* LHBaseViewController.swift */,
 			);
 			path = tool;
 			sourceTree = "<group>";
@@ -247,11 +267,15 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-LHTool/Pods-LHTool-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/TZImagePickerController/TZImagePickerController.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TZImagePickerController.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -265,14 +289,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E9D42CD20FF33E900893393 /* LHMyUploadPhotoVC.swift in Sources */,
 				7E9D42C520FED3BB00893393 /* LHMoreChooseVC.swift in Sources */,
+				7EA27A7C2100312200A65094 /* LHMyCollectionViewCell.swift in Sources */,
 				7E9D42C720FED4AA00893393 /* LHMyTableViewCell.swift in Sources */,
 				7E73F39320E47F2200CFA222 /* LHRequseTool.swift in Sources */,
 				7E9D42C320FED3A500893393 /* LHSingleChooseVC.swift in Sources */,
 				7E70F54A2071D39800A1E66E /* String+Category.swift in Sources */,
 				7EE903F5206F29A10051E41A /* UIColor+Category.swift in Sources */,
 				7E8E57D320F89EB300998A38 /* LHQRCodeTool.swift in Sources */,
+				7EA27A802100797300A65094 /* LHBaseViewController.swift in Sources */,
 				7E91C1EB20EF6EA400A9DF7B /* HUD+Add.swift in Sources */,
+				7EA27A7E2100664C00A65094 /* LHPhotoShowVC.swift in Sources */,
 				7EE903F9206F33ED0051E41A /* UIButton+Category.swift in Sources */,
 				7EE903E4206F28A10051E41A /* ViewController.swift in Sources */,
 				7EE903FD206F38300051E41A /* UIImage+Category.swift in Sources */,

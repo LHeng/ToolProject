@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LHMoreChooseVC: UIViewController {
+class LHMoreChooseVC: LHBaseViewController {
 
     var arr : [Bool] = [Bool]()
 

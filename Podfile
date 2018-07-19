@@ -5,4 +5,6 @@ use_frameworks!
 target 'LHTool' do
     pod 'Alamofire'
     pod 'MBProgressHUD'
+    pod 'TZImagePickerController'
+    pod 'SDWebImage'
 end

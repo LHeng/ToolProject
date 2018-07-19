@@ -8,12 +8,13 @@
 
 import UIKit
 
-class LHSingleChooseVC: UIViewController {
+class LHSingleChooseVC: LHBaseViewController {
 
     @IBOutlet weak var myTableView: UITableView!
     
     var isChoose : Int = -1
     var arr : [Bool] = [Bool]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         for _ in 0..<40 {
