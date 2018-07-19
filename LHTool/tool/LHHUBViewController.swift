@@ -41,26 +41,22 @@ class LHHUBViewController: NSObject {
     ///   - VC: 显示的视图
     ///   - title: 主题
     ///   - message: 信息
+    ///   - action: 动作事件
     ///   - block: 按钮回调
-    func actionSheetView(vc:UIViewController,title:String?,message:String?,block: Block?)  {
+    func actionSheetView(vc:UIViewController,title:String?,message:String?,action:[String],block: Block?)  {
         let alertVC : UIAlertController = UIAlertController.init(title: title, message: message, preferredStyle: .actionSheet)
         
-        let action1 = UIAlertAction.init(title: "拍照", style: .default) { (action) in
-            if  let _ = block {
-                block!(1)
+        for i in 0..<action.count {
+            let action = UIAlertAction.init(title: action[i], style: .default) { (action) in
+                if  let _ = block {
+                    block!(i)
+                }
+                alertVC.dismiss(animated: true, completion: nil)
             }
-            alertVC.dismiss(animated: true, completion: nil)
+            alertVC.addAction(action)
         }
-        let action2 = UIAlertAction.init(title: "手机相册", style: .default) { (action) in
-            if  let _ = block {
-                block!(2)
-            }
-            alertVC.dismiss(animated: true, completion: nil)
-        }
-        let action3 = UIAlertAction.init(title: "取消", style: .cancel, handler: nil)
-        alertVC.addAction(action1)
-        alertVC.addAction(action2)
-        alertVC.addAction(action3)
+        let action = UIAlertAction.init(title: "取消", style: .cancel, handler: nil)
+        alertVC.addAction(action)
         vc.present(alertVC, animated: true, completion: nil)
     }
 }

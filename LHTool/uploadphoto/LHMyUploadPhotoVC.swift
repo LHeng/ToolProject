@@ -89,11 +89,11 @@ extension LHMyUploadPhotoVC: UICollectionViewDelegate,UICollectionViewDataSource
     
 
     func addPhoto() {
-        LHHUBViewController().actionSheetView(vc: self, title: nil, message: nil) { (index) in
+        LHHUBViewController().actionSheetView(vc: self, title: nil, message: nil, action: ["拍照","手机相册"]) { (index) in
             switch index {
-            case 1:
+            case 0:
                 break;
-            case 2:
+            case 1:
                 let vc =  TZImagePickerController.init(maxImagesCount: 9, delegate: self)
                 self.present(vc!, animated: true, completion: nil)
                 break;
