@@ -98,7 +98,7 @@ extension LHMyUploadPhotoVC: UICollectionViewDelegate,UICollectionViewDataSource
                 self.present(pick, animated: true, completion: nil)
                 break;
             case 1:
-                let vc =  TZImagePickerController.init(maxImagesCount: 9, delegate: self)
+                let vc =  TZImagePickerController.init(maxImagesCount: 4, delegate: self)
                 self.present(vc!, animated: true, completion: nil)
                 break;
             default:

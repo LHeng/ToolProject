@@ -28,6 +28,7 @@ class LHSingleChooseVC: LHBaseViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
 }
 
 
@@ -67,4 +68,6 @@ extension LHSingleChooseVC : UITableViewDataSource,UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
     }
+    
+    
 }

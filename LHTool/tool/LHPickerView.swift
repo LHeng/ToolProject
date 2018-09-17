@@ -161,7 +161,7 @@ class LHPickerView: UIView,UIPickerViewDelegate,UIPickerViewDataSource {
     func showInView() {
         self.alpha = 1
         UIView.animate(withDuration: 0.25, animations: {
-            self.bgView.y = self.height-self.bgView.frame.height
+            self.bgView.y = UIScreen.main.bounds.height - self.bgView.frame.height
         }) { (true) in
             
         }

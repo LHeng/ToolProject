@@ -17,7 +17,7 @@ enum RequestMethod {
 }
 class LHBaseHttps: NSObject {
 
-    var baseUrl:String = "https://sapi.o2o-test.mao-wo.com/o2o-store-api/"    //baseUrl
+    var baseUrl:String = ""    //baseUrl
     var isNeedAccessToken:Bool = true  //是否拼接AccessToken
     var baseParams:NSMutableDictionary = [:]  //公共参数
     

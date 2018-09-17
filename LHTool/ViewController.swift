@@ -32,7 +32,9 @@ class ViewController: UIViewController {
             let dateFormater = DateFormatter()
             dateFormater.dateFormat = "yyyy-MM-dd"
             let result = dateFormater.string(from: select)
-            print("---\(result)")
+            LHHUBViewController().alertView(VC: self, title: "温馨提示", message: result, block: { (index) in
+                
+            })
         }
         alert.showInView()
     }
@@ -43,7 +45,9 @@ class ViewController: UIViewController {
         alert.alpha = 0
         UIApplication.shared.keyWindow?.addSubview(alert)
         alert.myblock = {(str) in
-            print("---\(str)")
+            LHHUBViewController().alertView(VC: self, title: "温馨提示", message: str, block: { (index) in
+                
+            })
         }
         alert.showInView()
     }
@@ -57,7 +61,9 @@ class ViewController: UIViewController {
             let dateFormater = DateFormatter()
             dateFormater.dateFormat = "HH:mm:ss"
             let result = dateFormater.string(from: select)
-            print("---\(result)")
+            LHHUBViewController().alertView(VC: self, title: "温馨提示", message: result, block: { (index) in
+                
+            })
         }
         alert.showInView()
     }
@@ -90,6 +96,13 @@ class ViewController: UIViewController {
         imageQRCode.isHidden = false
     }
     
+    @IBAction func scan(_ sender: Any) {
+        let VC : LHScanVC = LHScanVC()
+        VC.myblock = {(result)in
+           
+        }
+        self.navigationController?.pushViewController(VC, animated: true)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

@@ -12,7 +12,7 @@ class LHBaseViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let left = UIBarButtonItem(image: UIImage(named: "back"), style: UIBarButtonItemStyle.plain, target: self, action: #selector(onClickBack))
+        let left = UIBarButtonItem(image: UIImage(named: "back"), style: .plain, target: self, action: #selector(onClickBack))
         self.navigationItem.leftBarButtonItem = left
         // Do any additional setup after loading the view.
     }
@@ -24,16 +24,5 @@ class LHBaseViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

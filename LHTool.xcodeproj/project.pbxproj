@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E30150F2112DADF00DFA27D /* LHScanVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E30150E2112DADF00DFA27D /* LHScanVC.swift */; };
 		7E70F54A2071D39800A1E66E /* String+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E70F5492071D39800A1E66E /* String+Category.swift */; };
 		7E73F39120E4791E00CFA222 /* LHBaseHttps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E73F39020E4791E00CFA222 /* LHBaseHttps.swift */; };
 		7E73F39320E47F2200CFA222 /* LHRequseTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E73F39220E47F2200CFA222 /* LHRequseTool.swift */; };
+		7E7EBD942106D7B1008AC210 /* LHBaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7EBD932106D7B1008AC210 /* LHBaseNavigationController.swift */; };
 		7E84F66E20E210BE00DE337F /* LHPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E84F66D20E210BE00DE337F /* LHPickerView.swift */; };
+		7E8AFD3F211D297A00843F8B /* LHCheckVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8AFD3E211D297A00843F8B /* LHCheckVersion.swift */; };
 		7E8E57D320F89EB300998A38 /* LHQRCodeTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8E57D220F89EB300998A38 /* LHQRCodeTool.swift */; };
 		7E8E57D520F8A5C800998A38 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E8E57D420F8A5C700998A38 /* CoreGraphics.framework */; };
 		7E91C1EB20EF6EA400A9DF7B /* HUD+Add.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E91C1EA20EF6EA400A9DF7B /* HUD+Add.swift */; };
@@ -22,6 +25,8 @@
 		7EA27A7C2100312200A65094 /* LHMyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA27A7B2100312200A65094 /* LHMyCollectionViewCell.swift */; };
 		7EA27A7E2100664C00A65094 /* LHPhotoShowVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA27A7D2100664C00A65094 /* LHPhotoShowVC.swift */; };
 		7EA27A802100797300A65094 /* LHBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA27A7F2100797300A65094 /* LHBaseViewController.swift */; };
+		7EA8125F2148E9F4009547A8 /* LHDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA8125E2148E9F4009547A8 /* LHDefine.swift */; };
+		7EB70B7521353B30009A761B /* DispatchQueue+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB70B7421353B30009A761B /* DispatchQueue+Category.swift */; };
 		7EE903E2206F28A10051E41A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE903E1206F28A10051E41A /* AppDelegate.swift */; };
 		7EE903E4206F28A10051E41A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE903E3206F28A10051E41A /* ViewController.swift */; };
 		7EE903E7206F28A10051E41A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EE903E5206F28A10051E41A /* Main.storyboard */; };
@@ -37,10 +42,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7E30150E2112DADF00DFA27D /* LHScanVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LHScanVC.swift; sourceTree = "<group>"; };
 		7E70F5492071D39800A1E66E /* String+Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Category.swift"; sourceTree = "<group>"; };
 		7E73F39020E4791E00CFA222 /* LHBaseHttps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LHBaseHttps.swift; sourceTree = "<group>"; };
 		7E73F39220E47F2200CFA222 /* LHRequseTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LHRequseTool.swift; sourceTree = "<group>"; };
+		7E7EBD932106D7B1008AC210 /* LHBaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LHBaseNavigationController.swift; sourceTree = "<group>"; };
 		7E84F66D20E210BE00DE337F /* LHPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LHPickerView.swift; sourceTree = "<group>"; };
+		7E8AFD3E211D297A00843F8B /* LHCheckVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LHCheckVersion.swift; sourceTree = "<group>"; };
 		7E8E57D220F89EB300998A38 /* LHQRCodeTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LHQRCodeTool.swift; sourceTree = "<group>"; };
 		7E8E57D420F8A5C700998A38 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		7E91C1E620EF5F3C00A9DF7B /* LHTool-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LHTool-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -53,6 +61,8 @@
 		7EA27A7B2100312200A65094 /* LHMyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LHMyCollectionViewCell.swift; sourceTree = "<group>"; };
 		7EA27A7D2100664C00A65094 /* LHPhotoShowVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LHPhotoShowVC.swift; sourceTree = "<group>"; };
 		7EA27A7F2100797300A65094 /* LHBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LHBaseViewController.swift; sourceTree = "<group>"; };
+		7EA8125E2148E9F4009547A8 /* LHDefine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LHDefine.swift; sourceTree = "<group>"; };
+		7EB70B7421353B30009A761B /* DispatchQueue+Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Category.swift"; sourceTree = "<group>"; };
 		7EE903DE206F28A10051E41A /* LHTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LHTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EE903E1206F28A10051E41A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7EE903E3206F28A10051E41A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +103,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		7E7EBD952106D7BB008AC210 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				7E7EBD932106D7B1008AC210 /* LHBaseNavigationController.swift */,
+				7EA27A7F2100797300A65094 /* LHBaseViewController.swift */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
 		7EA27A7A2100248F00A65094 /* uploadphoto */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,11 +143,13 @@
 		7EE903E0206F28A10051E41A /* LHTool */ = {
 			isa = PBXGroup;
 			children = (
+				7E7EBD952106D7BB008AC210 /* common */,
 				7EA27A7A2100248F00A65094 /* uploadphoto */,
 				7EE903F3206F28BC0051E41A /* tool */,
 				7EE903E1206F28A10051E41A /* AppDelegate.swift */,
 				7EE903E3206F28A10051E41A /* ViewController.swift */,
 				7E9D42C220FED3A500893393 /* LHSingleChooseVC.swift */,
+				7E30150E2112DADF00DFA27D /* LHScanVC.swift */,
 				7E9D42C420FED3BB00893393 /* LHMoreChooseVC.swift */,
 				7E9D42C620FED4AA00893393 /* LHMyTableViewCell.swift */,
 				7E9D42CA20FEF05900893393 /* LHMyTableViewCell.xib */,
@@ -144,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				7EE903F4206F29A10051E41A /* UIColor+Category.swift */,
+				7EB70B7421353B30009A761B /* DispatchQueue+Category.swift */,
 				7EE903F6206F2F910051E41A /* UIView+Category.swift */,
 				7EE903F8206F33ED0051E41A /* UIButton+Category.swift */,
 				7EE903FA206F36370051E41A /* UILabel+Category.swift */,
@@ -156,7 +178,8 @@
 				7E73F39220E47F2200CFA222 /* LHRequseTool.swift */,
 				7E8E57D220F89EB300998A38 /* LHQRCodeTool.swift */,
 				7E91C1E620EF5F3C00A9DF7B /* LHTool-Bridging-Header.h */,
-				7EA27A7F2100797300A65094 /* LHBaseViewController.swift */,
+				7EA8125E2148E9F4009547A8 /* LHDefine.swift */,
+				7E8AFD3E211D297A00843F8B /* LHCheckVersion.swift */,
 			);
 			path = tool;
 			sourceTree = "<group>";
@@ -291,18 +314,23 @@
 			files = (
 				7E9D42CD20FF33E900893393 /* LHMyUploadPhotoVC.swift in Sources */,
 				7E9D42C520FED3BB00893393 /* LHMoreChooseVC.swift in Sources */,
+				7EB70B7521353B30009A761B /* DispatchQueue+Category.swift in Sources */,
 				7EA27A7C2100312200A65094 /* LHMyCollectionViewCell.swift in Sources */,
 				7E9D42C720FED4AA00893393 /* LHMyTableViewCell.swift in Sources */,
 				7E73F39320E47F2200CFA222 /* LHRequseTool.swift in Sources */,
 				7E9D42C320FED3A500893393 /* LHSingleChooseVC.swift in Sources */,
 				7E70F54A2071D39800A1E66E /* String+Category.swift in Sources */,
+				7E8AFD3F211D297A00843F8B /* LHCheckVersion.swift in Sources */,
 				7EE903F5206F29A10051E41A /* UIColor+Category.swift in Sources */,
 				7E8E57D320F89EB300998A38 /* LHQRCodeTool.swift in Sources */,
 				7EA27A802100797300A65094 /* LHBaseViewController.swift in Sources */,
 				7E91C1EB20EF6EA400A9DF7B /* HUD+Add.swift in Sources */,
 				7EA27A7E2100664C00A65094 /* LHPhotoShowVC.swift in Sources */,
 				7EE903F9206F33ED0051E41A /* UIButton+Category.swift in Sources */,
+				7E30150F2112DADF00DFA27D /* LHScanVC.swift in Sources */,
 				7EE903E4206F28A10051E41A /* ViewController.swift in Sources */,
+				7E7EBD942106D7B1008AC210 /* LHBaseNavigationController.swift in Sources */,
+				7EA8125F2148E9F4009547A8 /* LHDefine.swift in Sources */,
 				7EE903FD206F38300051E41A /* UIImage+Category.swift in Sources */,
 				7EE903F7206F2F910051E41A /* UIView+Category.swift in Sources */,
 				7EE903FB206F36370051E41A /* UILabel+Category.swift in Sources */,
@@ -458,7 +486,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 53W5B343QL;
+				DEVELOPMENT_TEAM = LVGFW638MM;
 				HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 				INFOPLIST_FILE = LHTool/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -482,7 +510,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 53W5B343QL;
+				DEVELOPMENT_TEAM = LVGFW638MM;
 				HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 				INFOPLIST_FILE = LHTool/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -96,8 +96,15 @@
                                     <segue destination="8Ae-sa-WcX" kind="show" id="IUV-m5-869"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qbu-ql-R5T">
+                                <rect key="frame" x="306" y="324" width="46" height="30"/>
+                                <state key="normal" title="扫一扫"/>
+                                <connections>
+                                    <action selector="scan:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ehm-le-Wfb"/>
+                                </connections>
+                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rtk-8f-XSV">
-                                <rect key="frame" x="87" y="233.5" width="200" height="200"/>
+                                <rect key="frame" x="87.5" y="233.5" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="35C-KK-mYG"/>
                                     <constraint firstAttribute="width" constant="200" id="UFw-Ou-iAO"/>
@@ -113,6 +120,7 @@
                             <constraint firstItem="11A-5J-tSH" firstAttribute="centerX" secondItem="lEL-S7-9sl" secondAttribute="centerX" id="8D6-Wd-Xbd"/>
                             <constraint firstItem="j6R-jL-G4H" firstAttribute="centerX" secondItem="hQP-v4-LY2" secondAttribute="centerX" id="8nk-Gh-F99"/>
                             <constraint firstItem="9bW-vB-DTE" firstAttribute="centerX" secondItem="cRj-37-Yu7" secondAttribute="centerX" id="9Od-Y4-sEN"/>
+                            <constraint firstItem="qbu-ql-R5T" firstAttribute="centerX" secondItem="9bW-vB-DTE" secondAttribute="centerX" id="DXO-bC-bbt"/>
                             <constraint firstItem="bjm-Pj-Pl2" firstAttribute="top" secondItem="j6R-jL-G4H" secondAttribute="bottom" constant="50" id="GYW-UF-I2W"/>
                             <constraint firstItem="cRj-37-Yu7" firstAttribute="centerY" secondItem="mLS-PM-67h" secondAttribute="centerY" id="Km6-ue-SD4"/>
                             <constraint firstItem="lEL-S7-9sl" firstAttribute="top" secondItem="zOq-pj-WNe" secondAttribute="bottom" constant="50" id="Lb5-85-J0a"/>
@@ -126,6 +134,7 @@
                             <constraint firstItem="6ik-Wj-MqL" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="cRj-37-Yu7" secondAttribute="leading" id="oZn-ft-sYq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cRj-37-Yu7" secondAttribute="trailing" constant="30" id="pqH-81-XHU"/>
                             <constraint firstItem="zOq-pj-WNe" firstAttribute="centerX" secondItem="zG3-y9-Pro" secondAttribute="centerX" id="qdr-3H-Gc2"/>
+                            <constraint firstItem="qbu-ql-R5T" firstAttribute="centerY" secondItem="lEL-S7-9sl" secondAttribute="centerY" id="rFW-CL-WE9"/>
                             <constraint firstItem="11A-5J-tSH" firstAttribute="top" secondItem="lEL-S7-9sl" secondAttribute="bottom" constant="50" id="sBc-du-4g3"/>
                             <constraint firstItem="bjm-Pj-Pl2" firstAttribute="centerX" secondItem="j6R-jL-G4H" secondAttribute="centerX" id="scL-6Z-3nR"/>
                             <constraint firstItem="hQP-v4-LY2" firstAttribute="top" secondItem="11A-5J-tSH" secondAttribute="bottom" constant="50" id="uar-I2-uvf"/>
@@ -141,7 +150,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="905" y="-306"/>
+            <point key="canvasLocation" x="94" y="518"/>
         </scene>
         <!--图片上传-->
         <scene sceneID="5OS-Mb-xcG">
@@ -228,7 +237,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ir8-jd-WHL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1848.8" y="-306.29685157421289"/>
+            <point key="canvasLocation" x="778" y="1286"/>
         </scene>
         <!--单选-->
         <scene sceneID="IEl-ne-9I4">
@@ -263,7 +272,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YUG-T5-xuO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1772" y="-3224"/>
+            <point key="canvasLocation" x="-572" y="1286"/>
         </scene>
         <!--多选-->
         <scene sceneID="fU7-wq-rNA">
@@ -298,26 +307,26 @@
                                     <rect key="frame" x="299" y="5" width="60" height="34"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" title="反选">
-                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
                                     <connections>
                                         <action selector="ButtonEvent:" destination="FTu-sh-iDL" eventType="touchUpInside" id="xqG-mL-CTG"/>
                                     </connections>
                                 </button>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </barButtonItem>
                             <barButtonItem width="30" style="done" id="Nyd-wa-zIX">
                                 <button key="customView" opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="W8f-xc-8p2">
                                     <rect key="frame" x="241" y="5" width="50" height="34"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" title="全选">
-                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
                                     <connections>
                                         <action selector="ButtonEvent:" destination="FTu-sh-iDL" eventType="touchUpInside" id="q2k-X9-fny"/>
                                     </connections>
                                 </button>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
@@ -327,17 +336,17 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VQ0-YY-2Nw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1887" y="1209"/>
+            <point key="canvasLocation" x="94" y="1286"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Base Navigation Controller-->
         <scene sceneID="fm5-Gr-zrw">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qP1-B6-Maw" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qP1-B6-Maw" customClass="LHBaseNavigationController" customModule="LHTool" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iX6-aX-7Sk">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="1" green="0.22581643609999999" blue="0.25475111119999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" name="systemOrangeColor" catalog="System" colorSpace="catalog"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
