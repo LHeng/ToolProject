@@ -88,7 +88,7 @@ class LHScanVC: UIViewController,AVCaptureMetadataOutputObjectsDelegate  {
         path.addRect(cropRect)
         path.addRect(self.view.bounds)
         
-        cropLayer.fillRule = kCAFillRuleEvenOdd
+        cropLayer.fillRule = CAShapeLayerFillRule.evenOdd
         cropLayer.path = path
         cropLayer.fillColor = UIColor.black.cgColor
         cropLayer.opacity = 0.6

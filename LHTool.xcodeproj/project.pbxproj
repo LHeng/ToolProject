@@ -227,7 +227,7 @@
 				TargetAttributes = {
 					7EE903DD206F28A10051E41A = {
 						CreatedOnToolsVersion = 9.3;
-						LastSwiftMigration = 0940;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -484,11 +484,13 @@
 			baseConfigurationReference = EB5AE5A1AB8F81549AFCD8D6 /* Pods-LHTool.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LVGFW638MM;
 				HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 				INFOPLIST_FILE = LHTool/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -497,8 +499,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "LHTool/tool/LHTool-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 			};
 			name = Debug;
@@ -508,11 +510,13 @@
 			baseConfigurationReference = 91636AD3AFC4EC94B169FE87 /* Pods-LHTool.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LVGFW638MM;
 				HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 				INFOPLIST_FILE = LHTool/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -520,8 +524,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.liuheng.tool.LHTool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "LHTool/tool/LHTool-Bridging-Header.h";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 			};
 			name = Release;

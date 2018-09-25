@@ -94,7 +94,7 @@ extension LHMyUploadPhotoVC: UICollectionViewDelegate,UICollectionViewDataSource
             case 0:
                 let pick:UIImagePickerController = UIImagePickerController()
                 pick.delegate = self
-                pick.sourceType = UIImagePickerControllerSourceType.camera
+                pick.sourceType = UIImagePickerController.SourceType.camera
                 self.present(pick, animated: true, completion: nil)
                 break;
             case 1:
@@ -108,9 +108,10 @@ extension LHMyUploadPhotoVC: UICollectionViewDelegate,UICollectionViewDataSource
     }
     
     //MARK: - UIImagePickerControllerDelegate
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        picker.dismiss(animated: true, completion: nil)
-        let image = info[UIImagePickerControllerOriginalImage] as? UIImage
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+         picker.dismiss(animated: true, completion: nil)
+        let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
         images.append(image!)
         myCollectionView.reloadData()
     }

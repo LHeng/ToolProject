@@ -82,7 +82,7 @@ extension UIImage {
     func resetSizeOfImageData(sourceImage: UIImage!, maxSize: Int) -> NSData {
         
         //先判断当前质量是否满足要求，不满足再进行压缩
-        var finallImageData = UIImageJPEGRepresentation(sourceImage,1.0)
+        var finallImageData = sourceImage.jpegData(compressionQuality: 1.0)
         let sizeOrigin      = finallImageData?.count
         let sizeOriginKB    = sizeOrigin! / 1024
         if sizeOriginKB <= maxSize {
@@ -95,7 +95,7 @@ extension UIImage {
         var defaultSize = CGSize(width: 1024, height: 1024/sourceImageAspectRatio)
         let newImage = self.newSizeImage(size: defaultSize, sourceImage: sourceImage)
         
-        finallImageData = UIImageJPEGRepresentation(newImage,1.0);
+        finallImageData = newImage.jpegData(compressionQuality: 1.0)
         
         //保存压缩系数
         let compressionQualityArr = NSMutableArray()
@@ -125,8 +125,8 @@ extension UIImage {
                 break
             }
             defaultSize = CGSize(width: (defaultSize.width-CGFloat(reduceWidth)), height: (defaultSize.height-CGFloat(reduceHeight)))
-            let image = self.newSizeImage(size: defaultSize, sourceImage: UIImage.init(data: UIImageJPEGRepresentation(newImage, compressionQualityArr.lastObject as! CGFloat)!)!)
-            finallImageData = self.halfFuntion(arr: compressionQualityArr.copy() as! [CGFloat], image: image, sourceData: UIImageJPEGRepresentation(image,1.0)!, maxSize: maxSize)
+            let image = self.newSizeImage(size: defaultSize, sourceImage: UIImage.init(data: newImage.jpegData(compressionQuality: compressionQualityArr.lastObject as! CGFloat)!)!)
+            finallImageData = self.halfFuntion(arr: compressionQualityArr.copy() as! [CGFloat], image: image, sourceData: image.jpegData(compressionQuality: 1.0)!, maxSize: maxSize)
         }
         
         return finallImageData! as NSData
@@ -164,7 +164,7 @@ extension UIImage {
         while start <= end {
             index = start + (end - start)/2
             
-            tempFinallImageData = UIImageJPEGRepresentation(image, arr[index])!
+            tempFinallImageData = image.jpegData(compressionQuality: arr[index])!
             
             let sizeOrigin = tempFinallImageData.count
             let sizeOriginKB = sizeOrigin / 1024

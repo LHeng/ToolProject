@@ -20,7 +20,7 @@ class LHBaseNavigationController: UINavigationController {
         //back button and such
         self.navigationBar.tintColor = UIColor.white
         //title's text color
-        self.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
+        self.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
         // Do any additional setup after loading the view.
     }
 

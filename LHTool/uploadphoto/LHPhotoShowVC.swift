@@ -68,7 +68,7 @@ class LHPhotoShowVC: UIViewController, UICollectionViewDataSource, UICollectionV
         layout.itemSize = CGSize.init(width: view.width, height: view.height-122)
         layout.minimumInteritemSpacing = 0.0
         layout.minimumLineSpacing = 0.0
-        layout.scrollDirection = UICollectionViewScrollDirection.horizontal
+        layout.scrollDirection = UICollectionView.ScrollDirection.horizontal
         
         collectionView = UICollectionView(frame: self.view.bounds, collectionViewLayout: layout)
         collectionView?.backgroundColor = self.view.backgroundColor
@@ -95,7 +95,7 @@ class LHPhotoShowVC: UIViewController, UICollectionViewDataSource, UICollectionV
         }
         
         titleLabel?.text = String(format: "%d/%d",currentIndex + 1,items.count)
-        collectionView?.scrollToItem(at: IndexPath(item: currentIndex, section: 0), at: UICollectionViewScrollPosition(), animated: false)
+        collectionView?.scrollToItem(at: IndexPath(item: currentIndex, section: 0), at: UICollectionView.ScrollPosition(), animated: false)
         
         // Do any additional setup after loading the view.
     }
@@ -196,7 +196,7 @@ class ScalableImageView : UIScrollView, UIScrollViewDelegate {
         self.maximumZoomScale = 3.0
         
         _imageView = UIImageView(frame: self.bounds)
-        _imageView?.contentMode = UIViewContentMode.scaleAspectFit
+        _imageView?.contentMode = UIView.ContentMode.scaleAspectFit
         self.addSubview(_imageView!)
         
         let g = UITapGestureRecognizer(target: self, action: #selector(handleTap))
