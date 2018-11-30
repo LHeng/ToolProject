@@ -177,9 +177,9 @@
 				7E73F39020E4791E00CFA222 /* LHBaseHttps.swift */,
 				7E73F39220E47F2200CFA222 /* LHRequseTool.swift */,
 				7E8E57D220F89EB300998A38 /* LHQRCodeTool.swift */,
-				7E91C1E620EF5F3C00A9DF7B /* LHTool-Bridging-Header.h */,
 				7EA8125E2148E9F4009547A8 /* LHDefine.swift */,
 				7E8AFD3E211D297A00843F8B /* LHCheckVersion.swift */,
+				7E91C1E620EF5F3C00A9DF7B /* LHTool-Bridging-Header.h */,
 			);
 			path = tool;
 			sourceTree = "<group>";
