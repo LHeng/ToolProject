@@ -21,7 +21,7 @@ class LHMyCollectionViewCell: UICollectionViewCell {
     var myImage :  UIImage {
         set {
             _myImage = newValue
-            myImageView.image = _myImage
+            myImageView.image = newValue
         }
         get{
             return _myImage

@@ -58,6 +58,7 @@ extension String {
         return passwordTest.evaluate(with: self)
     }
 
+    //检验账号和密码是否合格
     static func telAndPasswordIsRight(telNum : String,password : String)->Bool{
         if telNum.isPhoneNumber() && password.isPassword() {
             return true
@@ -65,7 +66,8 @@ extension String {
             return false
         }
     }
-    
+
+    //字符串转Double
     func getNumberFomat()->Double {
         let nonDigits = NSCharacterSet.decimalDigits.inverted
         let remainSecond : NSString = self.trimmingCharacters(in: nonDigits) as NSString

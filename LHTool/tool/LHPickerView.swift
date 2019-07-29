@@ -74,7 +74,6 @@ class LHPickerView: UIView,UIPickerViewDelegate,UIPickerViewDataSource {
             pickerView = UIPickerView.init(frame: CGRect.init(x: 0, y: 0, width: width, height: 200))
             pickerView.delegate = self
             pickerView.dataSource = self
-            initWithPicker(view: pickerView)
         } else if type == Mytype.date {
             datePicker = UIDatePicker.init(frame: CGRect.init(x: 0, y: 0, width: width, height: 200))
             datePicker.datePickerMode = .date
@@ -89,7 +88,6 @@ class LHPickerView: UIView,UIPickerViewDelegate,UIPickerViewDataSource {
             if timeStr.count > 0 {
                 datePicker.date = date!
             }
-            initWithPicker(view: datePicker)
         } else if type == Mytype.time {
             datePicker = UIDatePicker.init(frame: CGRect.init(x: 0, y: 0, width: width, height: 200))
             datePicker.datePickerMode = .time
@@ -104,8 +102,8 @@ class LHPickerView: UIView,UIPickerViewDelegate,UIPickerViewDataSource {
             if dateStr.count > 0 {
                 datePicker.date = date!
             }
-            initWithPicker(view: datePicker)
         }
+        initWithPicker(view: datePicker)
     }
     
     func initWithPicker(view: UIView) {

@@ -24,10 +24,10 @@ extension DispatchQueue {
     }
     
     func async(block: @escaping ()->()) {
-        self.async(execute: block)
+       async(execute: block)
     }
     
     func after(time: DispatchTime, block: @escaping ()->()) {
-        self.asyncAfter(deadline: time, execute: block)
+        asyncAfter(deadline: time, execute: block)
     }
 }

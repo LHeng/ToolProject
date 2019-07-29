@@ -7,4 +7,5 @@ target 'LHTool' do
     pod 'MBProgressHUD'
     pod 'TZImagePickerController'
     pod 'SDWebImage'
+    pod 'MJExtension'
 end

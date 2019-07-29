@@ -112,7 +112,8 @@ extension UIView {
             y = newVal - height
         }
     }
-    
+
+    // centerX
     var centerX : CGFloat {
         
         get {
@@ -123,7 +124,8 @@ extension UIView {
             center = CGPoint(x: newVal, y: center.y)
         }
     }
-    
+
+    // centerY
     var centerY : CGFloat {
         
         get {
@@ -134,28 +136,32 @@ extension UIView {
             center = CGPoint(x: center.x, y: newVal)
         }
     }
-    
+
+    // middleX
     var middleX : CGFloat {
         
         get {
             return width / 2
         }
     }
-    
+
+    // middleY
     var middleY : CGFloat {
         
         get {
             return height / 2
         }
     }
-    
+
+    // middlePoint
     var middlePoint : CGPoint {
         
         get {
             return CGPoint(x: middleX, y: middleY)
         }
     }
-    
+
+    // addCorner
     func addCorner(roundingCorners: UIRectCorner, cornerSize: CGSize) {
         let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: roundingCorners, cornerRadii: cornerSize)
         let cornerLayer = CAShapeLayer()

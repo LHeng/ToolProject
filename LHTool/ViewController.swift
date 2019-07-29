@@ -17,6 +17,21 @@ class ViewController: UIViewController {
         imageQRCode.isHidden = true
         let touch = UITapGestureRecognizer.init(target: self, action: #selector(touchEvent))
         view.addGestureRecognizer(touch)
+        post()
+    }
+
+    private func post() {
+
+        var param: [String : Any] = [String : Any]()
+        param["dataType"] = "bp-msg"
+        param["elderCode"] = "OR63854292373"
+        param["param"] = "{\"devId\": \"T0000085\", \"devType\": \"InfraThermo\", \"measureMode\": \"body\", \"occurTime\": 1563873687000, \"temperature\": 36,  \"unit\": \"℃\" }"
+
+        LHRequseTool.requestPost(method: .RequestMethodPOST, params: param as NSDictionary , dataArr: NSMutableArray(), success: { (arr) in
+                
+        }) { (err) in
+
+        }
     }
     
     @objc  func touchEvent() {
@@ -84,11 +99,11 @@ class ViewController: UIViewController {
         let HUD =  MBProgressHUD().showMessage( message: "加载中...",view: view)
         let delaQueue = DispatchQueue.init(label: "com.syc.nd", qos: .userInteractive)
         let delayTime : DispatchTimeInterval = .seconds(3)
-        delaQueue.asyncAfter(deadline: .now() + delayTime) {
-            DispatchQueue.main.async(execute: {
+        delaQueue.after(time: .now() + delayTime, block: {
+            DispatchQueue.main.async(block: {
                 HUD?.hideHUDForView(vc: self.view)
             })
-        }
+        })
     }
     
     @IBAction func showQRCode(_ sender: Any) {

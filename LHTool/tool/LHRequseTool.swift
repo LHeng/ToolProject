@@ -9,23 +9,13 @@
 import UIKit
 
 class LHRequseTool: NSObject {
-    class func requestCityList(method:RequestMethod,params:NSMutableDictionary,dataArr:NSMutableArray,success:@escaping (NSMutableArray)->(),failure:@escaping (Error)->()) -> Void {
+
+    class func requestPost(method:RequestMethod,params:NSDictionary,dataArr:NSMutableArray,success:@escaping (NSMutableArray)->(),failure:@escaping (Error)->()) -> Void {
         
         LHBaseHttps.shareLHBaseHttps.isNeedAccessToken = false
-        LHBaseHttps.shareLHBaseHttps .RequestParams(url:"", method: method, params: params, success: { (respones) in
-            print(respones)
-            
-            if respones is NSNumber {
-                
-                print("no success or no Data")
-                
-            } else {
-                
-                //解析数据
-                //success(数组)
-                
-            }
-            
+        LHBaseHttps.shareLHBaseHttps.RequestParams(url:"http://zhanhui-background.phhyzy.com/robot/health/message", method: method, params: params, success: { (respones) in
+            print(respones ?? "")
+
         }) { (error) in
             failure(error)
         }

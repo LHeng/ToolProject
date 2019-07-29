@@ -35,6 +35,7 @@ class LHScanVC: UIViewController,AVCaptureMetadataOutputObjectsDelegate  {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor.orange
         initNav()
         initScanpreView()
         // Do any additional setup after loading the view.
@@ -178,10 +179,10 @@ class LHScanVC: UIViewController,AVCaptureMetadataOutputObjectsDelegate  {
             self.startRunning()
             self.timer.fireDate = Date()
         })
-//        if let _ = myblock {
-//            self.myblock(result);
-//        }
-//        self.navigationController?.popViewController(animated: true)
+        if let _ = myblock {
+            self.myblock(result);
+        }
+        self.navigationController?.popViewController(animated: true)
     }
     
 }

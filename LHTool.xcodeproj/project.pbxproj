@@ -38,7 +38,7 @@
 		7EE903FB206F36370051E41A /* UILabel+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE903FA206F36370051E41A /* UILabel+Category.swift */; };
 		7EE903FD206F38300051E41A /* UIImage+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE903FC206F38300051E41A /* UIImage+Category.swift */; };
 		7EF91EB120D20A4400774737 /* LHHUBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF91EB020D20A4400774737 /* LHHUBViewController.swift */; };
-		A2501614FE7C6616AA7A759A /* Pods_LHTool.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F310105452C8F73C2BA6D40A /* Pods_LHTool.framework */; };
+		A2501614FE7C6616AA7A759A /* Pods_LHTool.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F310105452C8F73C2BA6D40A /* Pods_LHTool.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -227,7 +227,7 @@
 				TargetAttributes = {
 					7EE903DD206F28A10051E41A = {
 						CreatedOnToolsVersion = 9.3;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -236,6 +236,7 @@
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				en,
 				Base,
 			);
 			mainGroup = 7EE903D5206F28A00051E41A;
@@ -287,9 +288,10 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-LHTool/Pods-LHTool-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-LHTool/Pods-LHTool-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/TZImagePickerController/TZImagePickerController.framework",
 			);
@@ -297,12 +299,13 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJExtension.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TZImagePickerController.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LHTool/Pods-LHTool-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LHTool/Pods-LHTool-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -488,7 +491,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LVGFW638MM;
-				HEADER_SEARCH_PATHS = "${SRCROOT}/**";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"${SRCROOT}",
+				);
 				INFOPLIST_FILE = LHTool/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -499,7 +505,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "LHTool/tool/LHTool-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 			};
@@ -514,7 +520,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LVGFW638MM;
-				HEADER_SEARCH_PATHS = "${SRCROOT}/**";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"${SRCROOT}",
+				);
 				INFOPLIST_FILE = LHTool/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -524,7 +533,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.liuheng.tool.LHTool;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "LHTool/tool/LHTool-Bridging-Header.h";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 			};
