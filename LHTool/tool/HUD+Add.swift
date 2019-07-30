@@ -16,7 +16,7 @@ extension MBProgressHUD  {
     ///   - text: 信息内容
     ///   - icon: 图片
     ///   - vc: 显示的视图
-    func show(text:String,icon:String,vc:UIView) {
+    func show(text: String, icon:String, vc: UIView) {
         //快速显示一个提示框
         let hud : MBProgressHUD = MBProgressHUD.showAdded(to: vc, animated: true)
         hud.label.text = text
@@ -35,7 +35,7 @@ extension MBProgressHUD  {
     /// 显示成功信息
     ///
     /// - Parameter success: 信息内容
-    func showSuccess(success:String) {
+    func showSuccess(success: String) {
         MBProgressHUD().hideHUD()
         self.showSuccess(success: success, vc: UIApplication.shared.windows.last!)
     }
@@ -46,7 +46,7 @@ extension MBProgressHUD  {
     /// - Parameters:
     ///   - success: 信息内容
     ///   - vc: 显示信息的视图
-    func showSuccess(success:String,vc:UIView) {
+    func showSuccess(success: String, vc: UIView) {
         MBProgressHUD().hideHUD()
         self.show(text: success, icon: "", vc: vc)
     }
@@ -55,7 +55,7 @@ extension MBProgressHUD  {
     /// 显示错误信息
     ///
     /// - Parameter error: 信息内容
-    func showError(error:String) {
+    func showError(error: String) {
         MBProgressHUD().hideHUD()
         self.showErrpr(error: error, vc: UIApplication.shared.windows.last!)
     }
@@ -65,7 +65,7 @@ extension MBProgressHUD  {
     /// - Parameters:
     ///   - success: 信息内容
     ///   - vc: 显示信息的视图
-    func showErrpr(error:String,vc:UIView) {
+    func showErrpr(error: String, vc: UIView) {
         MBProgressHUD().hideHUD()
         self.show(text: error, icon: "", vc: vc)
     }
@@ -74,7 +74,7 @@ extension MBProgressHUD  {
     ///
     /// - Parameter message: 信息内容
     /// - Returns: 直接返回一个MBProgressHUD，需要手动关闭
-    func showMessage(message:String) -> MBProgressHUD {
+    func showMessage(message: String) -> MBProgressHUD {
         MBProgressHUD().hideHUD()
         return showMessage(message: message, view: UIApplication.shared.windows.last!)
     }
@@ -85,7 +85,7 @@ extension MBProgressHUD  {
     ///   - message: 信息内容
     ///   - view: 需要显示信息的视图
     /// - Returns: 直接返回一个MBProgressHUD，需要手动关闭
-    func showMessage(message:String,view:UIView) -> MBProgressHUD! {
+    func showMessage(message: String,view: UIView) -> MBProgressHUD! {
         // 快速显示一个提示信息
         let hud : MBProgressHUD = MBProgressHUD.showAdded(to: view, animated: true)
         hud.label.text = message;
@@ -105,7 +105,7 @@ extension MBProgressHUD  {
     /// 手动关闭MBProgressHUD
     ///
     /// - Parameter vc: 显示MBProgressHUD的视图
-    func hideHUDForView(vc:UIView) {
+    func hideHUDForView(vc: UIView) {
         MBProgressHUD.hide(for: vc, animated: true);
     }
 }

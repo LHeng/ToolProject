@@ -11,7 +11,7 @@ import UIKit
 class LHQRCodeTool: NSObject {
 
     //MARK: -传进去字符串,生成二维码图片
-    func createQRCode(data:String,imageViewWidth:CGFloat) -> UIImage {
+    func createQRCode(data: String, imageViewWidth: CGFloat) -> UIImage {
         
         //创建滤镜对象
         let filter : CIFilter = CIFilter.init(name: "CIQRCodeGenerator")!
@@ -34,7 +34,7 @@ class LHQRCodeTool: NSObject {
     
     //MARK: - 根据背景图片和头像合成头像二维码
     
-    func creatImage(bgImage: UIImage, iconImage:UIImage) -> UIImage{
+    func creatImage(bgImage: UIImage, iconImage: UIImage) -> UIImage{
         
         //开启图片上下文
         UIGraphicsBeginImageContext(bgImage.size)
@@ -64,7 +64,7 @@ class LHQRCodeTool: NSObject {
     }
     
     //MARK: - 根据CIImage生成指定大小的高清UIImage
-    func createNonInterpolateUIImageFormCIImage(image:CIImage,size:CGFloat) -> UIImage {
+    func createNonInterpolateUIImageFormCIImage(image: CIImage, size: CGFloat) -> UIImage {
         
         let extent = image.extent
         

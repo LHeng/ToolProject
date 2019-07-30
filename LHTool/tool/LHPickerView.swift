@@ -17,7 +17,8 @@ class LHPickerView: UIView,UIPickerViewDelegate,UIPickerViewDataSource {
     }
     
     typealias Block = (_ string : String) ->()
-    typealias dateBlock = (_ data:Date) ->()
+    typealias dateBlock = (_ data: Date) ->()
+
     var textLabel : UILabel!
     var confirmButton : UIButton!
     
@@ -62,7 +63,7 @@ class LHPickerView: UIView,UIPickerViewDelegate,UIPickerViewDataSource {
     
     var pickerView : UIPickerView!
     
-    init(frame: CGRect,type:Mytype) {
+    init(frame: CGRect, type: Mytype) {
         super.init(frame: frame)
         backgroundColor = UIColor.clear
         view = UIView.init(frame: self.bounds)

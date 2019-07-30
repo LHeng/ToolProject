@@ -12,28 +12,28 @@ class LHCheckVersion: NSObject {
   
     static let instance : LHCheckVersion = LHCheckVersion()
 
-   class  func shareCheckVersion() -> LHCheckVersion {
+   class  func share() -> LHCheckVersion {
         return instance
     }
     
-    func isUpdataApp(appID : String) {
+    func isUpdataApp() {
         //获取appstore上的最新版本号
-        let appUrl = URL.init(string: "http://itunes.apple.com/lookup?id=" + appID)
+        let appUrl = URL.init(string: "http://itunes.apple.com/cn/lookup?id=" + APP_ID)
         let appMsg = try? String.init(contentsOf: appUrl!, encoding: .utf8)
+        print(appMsg ?? "")
         guard (appMsg != nil) else { return }
-        let appMsgDict:NSDictionary = getDictFromString(jString: appMsg!)
-        let appResultsArray:NSArray = appMsgDict["results"] as! NSArray
-        let appResultsDict:NSDictionary = appResultsArray.lastObject as! NSDictionary
-        let appStoreVersion:String = appResultsDict["version"] as! String
-        //获取当前手机安装使用的版本号
-        let localVersion:String = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as! String
-        self.compareVersion(localVersion: localVersion, storeVersion: appStoreVersion,appID: appID)
-
+        let appMsgDict = getDictFromString(jString: appMsg!)
+        let appResultsArray = appMsgDict["results"] as! NSArray
+        let appResultsDict = appResultsArray.lastObject as! NSDictionary
+        let appStoreVersion = appResultsDict["version"] as! String
+        print(appStoreVersion)
+        print(LOCAL_VERSION)
+        self.compareVersion(localVersion: LOCAL_VERSION, storeVersion: appStoreVersion, appID: APP_ID)
     }
     
     //去更新
-    private func updateApp(appId:String) {
-        let updateUrl:URL = URL.init(string: "http://itunes.apple.com/app/id" + appId)!
+    private func updateApp(appId: String) {
+        let updateUrl: URL = URL.init(string: "http://itunes.apple.com/app/id" + appId)!
         UIApplication.shared.open(updateUrl, options: [:], completionHandler: nil)
     }
     
@@ -46,7 +46,7 @@ class LHCheckVersion: NSObject {
     
     //JSONString转字典
     private func getDictFromString(jString:String) -> NSDictionary {
-        let jsonData:Data = jString.data(using: .utf8)!
+        let jsonData: Data = jString.data(using: .utf8)!
         let dict = try? JSONSerialization.jsonObject(with: jsonData, options: .mutableContainers)
         if dict != nil {
             return dict as! NSDictionary
@@ -58,7 +58,9 @@ class LHCheckVersion: NSObject {
         //用户是否设置不再提示
         let userDefaults = UserDefaults.standard
         let res = userDefaults.bool(forKey: "NO_ALERt_AGAIN")
-        guard localVersion.compare(storeVersion) == ComparisonResult.orderedDescending,!res else {
+        print(localVersion.compare(storeVersion).rawValue)
+        print(res)
+        guard localVersion.compare(storeVersion) == ComparisonResult.orderedAscending, !res else {
             return
         }
         //appstore上的版本号大于本地版本号 - 说明有更新
@@ -73,7 +75,7 @@ class LHCheckVersion: NSObject {
         alertC.addAction(yesAction)
         alertC.addAction(noAction)
         alertC.addAction(cancelAction)
-        UIApplication.shared.keyWindow?.rootViewController?.present(alertC, animated: true, completion: nil)
+        kWindow?.rootViewController?.present(alertC, animated: true, completion: nil)
     }
 
 }

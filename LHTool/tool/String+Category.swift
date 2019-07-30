@@ -11,7 +11,7 @@ import UIKit
 extension String {
 
     /// 判断是否是手机号
-    func isPhoneNumber() -> Bool {
+    func isPhoneNumber()->Bool {
         let mobile = "^1(3[0-9]|5[0-35-9]|8[025-9])\\d{8}$"
         let  CM = "^1(34[0-8]|(3[5-9]|5[017-9]|8[278])\\d)\\d{7}$"
         let  CU = "^1(3[0-2]|5[256]|8[56])\\d{8}$"
@@ -34,7 +34,7 @@ extension String {
     }
     
     /// 判断是否是邮政编码
-    func isPostCode() -> Bool {
+    func isPostCode()->Bool {
         let pattern = "^\\d{6}$"
         return NSPredicate.init(format:"SELF MATCHES %@",pattern).evaluate(with: self)
     }
@@ -59,7 +59,7 @@ extension String {
     }
 
     //检验账号和密码是否合格
-    static func telAndPasswordIsRight(telNum : String,password : String)->Bool{
+    static func telAndPasswordIsRight(telNum: String, password: String)->Bool{
         if telNum.isPhoneNumber() && password.isPassword() {
             return true
         }else{

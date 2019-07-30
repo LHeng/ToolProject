@@ -21,3 +21,9 @@ let LEFT = (SCREEN_WIDTH-220)/2
 
 let kScanRect = CGRect.init(x: LEFT, y: TOP, width: 220, height: 220)
 
+let APP_ID = "1445256705"
+
+let LOCAL_VERSION = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as! String
+
+let kWindow = UIApplication.shared.keyWindow
+

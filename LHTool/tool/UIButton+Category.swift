@@ -19,10 +19,10 @@ extension UIButton {
     ///   - selectro: 点击事件
     ///   - font: 字体大小
     ///   - titleColor: 字体颜色
-    convenience  init(title:String?,imageName:String?,target:AnyObject?,selectro:Selector?,font:UIFont?,titleColor:UIColor?) {
+    convenience  init(title: String?, imageName: String?, target: AnyObject?, selectro: Selector?, font: UIFont?, titleColor: UIColor?) {
         self.init()
-        if let imageN = imageName {
-                setImage(UIImage.init(named: imageN), for: .normal)
+        if let image = imageName {
+                setImage(UIImage.init(named: image), for: .normal)
         }
         setTitleColor(titleColor, for: .normal)
         titleLabel?.font = font

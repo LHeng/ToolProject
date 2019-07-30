@@ -16,7 +16,7 @@ extension UIImage {
     ///   - imageName: 图片
     ///   - color: 颜色
     /// - Returns: 返回类型
-    class func imageWithColor(imageName:String,color:UIColor) -> UIImage {
+    class func imageWithColor(imageName: String, color: UIColor) -> UIImage {
         let image = UIImage(named: imageName)
         UIGraphicsBeginImageContext((image?.size)!)
         let context = UIGraphicsGetCurrentContext()
@@ -79,7 +79,7 @@ extension UIImage {
     }
     
     // MARK: - 降低质量.压缩图片
-    func resetSizeOfImageData(sourceImage: UIImage!, maxSize: Int) -> NSData {
+    func resetSizeOfImageData(sourceImage: UIImage, maxSize: Int) -> NSData {
         
         //先判断当前质量是否满足要求，不满足再进行压缩
         var finallImageData = sourceImage.jpegData(compressionQuality: 1.0)

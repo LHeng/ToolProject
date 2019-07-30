@@ -17,7 +17,7 @@ class ViewController: UIViewController {
         imageQRCode.isHidden = true
         let touch = UITapGestureRecognizer.init(target: self, action: #selector(touchEvent))
         view.addGestureRecognizer(touch)
-        post()
+        LHCheckVersion.share().isUpdataApp()
     }
 
     private func post() {
@@ -25,9 +25,9 @@ class ViewController: UIViewController {
         var param: [String : Any] = [String : Any]()
         param["dataType"] = "bp-msg"
         param["elderCode"] = "OR63854292373"
-        param["param"] = "{\"devId\": \"T0000085\", \"devType\": \"InfraThermo\", \"measureMode\": \"body\", \"occurTime\": 1563873687000, \"temperature\": 36,  \"unit\": \"℃\" }"
+        param["param"] = "{\"devId\": \"00084bd7\",\"occurTime\": 1547100617645,\"devType\": \"InfraThermo\",\"measureMode\": \"\",\"temperature\": 36.7,\"unit\":\"℃\"}"
 
-        LHRequseTool.requestPost(method: .RequestMethodPOST, params: param as NSDictionary , dataArr: NSMutableArray(), success: { (arr) in
+        LHRequseTool.requestPost(url: "http://zhanhui-background.phhyzy.com/robot/health/message" ,params: param as NSDictionary , dataArr: NSMutableArray(), success: { (respones) in
                 
         }) { (err) in
 
@@ -84,6 +84,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func showError(_ sender: Any) {
+        post()
         MBProgressHUD().showError(error: "失败了")
     }
     

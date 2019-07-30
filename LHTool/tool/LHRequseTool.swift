@@ -10,11 +10,23 @@ import UIKit
 
 class LHRequseTool: NSObject {
 
-    class func requestPost(method:RequestMethod,params:NSDictionary,dataArr:NSMutableArray,success:@escaping (NSMutableArray)->(),failure:@escaping (Error)->()) -> Void {
+    class func requestPost(url: String, params: NSDictionary, dataArr: NSMutableArray?, success: @escaping (Any?)->(), failure: @escaping (Error)->()) -> Void {
         
         LHBaseHttps.shareLHBaseHttps.isNeedAccessToken = false
-        LHBaseHttps.shareLHBaseHttps.RequestParams(url:"http://zhanhui-background.phhyzy.com/robot/health/message", method: method, params: params, success: { (respones) in
+        LHBaseHttps.shareLHBaseHttps.RequestParams(url: url, method: .RequestMethodPOST, params: params, success: { (respones) in
             print(respones ?? "")
+            success(respones)
+        }) { (error) in
+            failure(error)
+        }
+    }
+
+    class func requestGet(url: String, params: NSDictionary, dataArr: NSMutableArray?, success: @escaping (Any?)->(), failure: @escaping (Error)->()) -> Void {
+
+        LHBaseHttps.shareLHBaseHttps.isNeedAccessToken = false
+        LHBaseHttps.shareLHBaseHttps.RequestParams(url: url, method: .RequestMethodGET, params: params, success: { (respones) in
+            print(respones ?? "")
+            success(respones)
 
         }) { (error) in
             failure(error)

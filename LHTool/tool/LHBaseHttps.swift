@@ -29,7 +29,7 @@ class LHBaseHttps: NSObject {
     static let shareLHBaseHttps = LHBaseHttps()
 
     //MARK:拼接完整的url
-    func getcCompleteUrl(url:String) -> String {
+    func getcCompleteUrl(url: String) -> String {
         let newUrl = self.baseUrl.appending(url)
         if self.isNeedAccessToken {
             //拼接AccessToken
@@ -38,14 +38,14 @@ class LHBaseHttps: NSObject {
     }
 
     //MARK:拼接完整的参数
-    func CombinationParams(params:NSDictionary) -> NSDictionary {
+    func CombinationParams(params: NSDictionary) ->[String: Any] {
 
-        self.baseParams.addEntries(from:params as! [AnyHashable : Any])
-        return self.baseParams
+        self.baseParams.addEntries(from: params as! [AnyHashable : Any])
+        return self.baseParams as! Parameters
     }
 
     //MARK:获取请求方式
-    func getHttpMethod(method:RequestMethod) -> HTTPMethod {
+    func getHttpMethod(method: RequestMethod) -> HTTPMethod {
         if method == .RequestMethodPOST {
             return .post
         } else {
@@ -54,7 +54,7 @@ class LHBaseHttps: NSObject {
     }
 
     //MARK:上传数据：post or get
-    func RequestParams(url:String,method:RequestMethod,params:NSDictionary,success:@escaping (Any?)->(),failure:@escaping (Error)->()) -> Void {
+    func RequestParams(url: String, method: RequestMethod, params: NSDictionary, success: @escaping (Any?)->(), failure: @escaping (Error)->()) -> Void {
 
         let allParams = self.CombinationParams(params: params)
 
@@ -66,13 +66,13 @@ class LHBaseHttps: NSObject {
 //            "Accept": "text/plain"
         ]
 
-        print(self.getcCompleteUrl(url:url))
+        print(self.getcCompleteUrl(url: url))
         print(allParams)
 
         //验证证书
         self .verificationCertificate()
 
-        Alamofire.request(self.getcCompleteUrl(url:url) as String, method: self.getHttpMethod(method: method), parameters:allParams as? Parameters, encoding: JSONEncoding.default, headers: headers).responseJSON { (response:DataResponse<Any>) in
+        Alamofire.request(self.getcCompleteUrl(url: url), method: self.getHttpMethod(method: method), parameters: allParams , encoding: JSONEncoding.default, headers: headers).responseJSON { (response:DataResponse<Any>) in
             print(response)
             switch(response.result) {
             case .success(let value):
@@ -113,7 +113,7 @@ class LHBaseHttps: NSObject {
 
     //MARK:上传带图片的数据
     //注意，图片必须为Data||NSData类型，其他参数尽量传String或者NSString
-    func RequestImageParams(url:String,params:NSMutableDictionary,success:@escaping (AnyObject)->(),failure:@escaping (Error)->()) -> Void {
+    func RequestImageParams(url: String, params: NSMutableDictionary, success: @escaping (AnyObject)->(), failure: @escaping (Error)->()) -> Void {
 
         //验证证书
         self .verificationCertificate()
@@ -127,12 +127,12 @@ class LHBaseHttps: NSObject {
                 if value is Data || value is NSData {
 
                     let imageName = String(describing: NSDate()).appending(".png")
-                    multipartFormData.append(value as! Data, withName: key as! String, fileName: imageName, mimeType: "image/png")
+                    multipartFormData.append(value as! Data, withName: key , fileName: imageName, mimeType: "image/png")
 
                 } else {
 
                     let str:String = value as! String
-                    multipartFormData.append(str.data(using: .utf8)!, withName: key as! String)
+                    multipartFormData.append(str.data(using: .utf8)!, withName: key )
 
                 }
 

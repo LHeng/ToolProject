@@ -4,7 +4,7 @@
 //
 //  Created by 谭真 on 15/12/24.
 //  Copyright © 2015年 谭真. All rights reserved.
-//  version 3.0.7 - 2018.09.13
+//  version 3.2.1 - 2019.05.29
 //  更多信息，请前往项目的github地址：https://github.com/banchichen/TZImagePickerController
 
 #import "TZImagePickerController.h"
@@ -235,6 +235,7 @@
     self = [super initWithRootViewController:previewVc];
     if (self) {
         self.maxImagesCount = 1;
+        self.allowPickingImage = YES;
         self.allowCrop = YES;
         self.selectedAssets = [NSMutableArray arrayWithArray:@[asset]];
         [self configDefaultSetting];
@@ -290,37 +291,37 @@
 
 - (void)setTakePictureImageName:(NSString *)takePictureImageName {
     _takePictureImageName = takePictureImageName;
-    _takePictureImage = [UIImage imageNamedFromMyBundle:takePictureImageName];
+    _takePictureImage = [UIImage tz_imageNamedFromMyBundle:takePictureImageName];
 }
 
 - (void)setPhotoSelImageName:(NSString *)photoSelImageName {
     _photoSelImageName = photoSelImageName;
-    _photoSelImage = [UIImage imageNamedFromMyBundle:photoSelImageName];
+    _photoSelImage = [UIImage tz_imageNamedFromMyBundle:photoSelImageName];
 }
 
 - (void)setPhotoDefImageName:(NSString *)photoDefImageName {
     _photoDefImageName = photoDefImageName;
-    _photoDefImage = [UIImage imageNamedFromMyBundle:photoDefImageName];
+    _photoDefImage = [UIImage tz_imageNamedFromMyBundle:photoDefImageName];
 }
 
 - (void)setPhotoNumberIconImageName:(NSString *)photoNumberIconImageName {
     _photoNumberIconImageName = photoNumberIconImageName;
-    _photoNumberIconImage = [UIImage imageNamedFromMyBundle:photoNumberIconImageName];
+    _photoNumberIconImage = [UIImage tz_imageNamedFromMyBundle:photoNumberIconImageName];
 }
 
 - (void)setPhotoPreviewOriginDefImageName:(NSString *)photoPreviewOriginDefImageName {
     _photoPreviewOriginDefImageName = photoPreviewOriginDefImageName;
-    _photoPreviewOriginDefImage = [UIImage imageNamedFromMyBundle:photoPreviewOriginDefImageName];
+    _photoPreviewOriginDefImage = [UIImage tz_imageNamedFromMyBundle:photoPreviewOriginDefImageName];
 }
 
 - (void)setPhotoOriginDefImageName:(NSString *)photoOriginDefImageName {
     _photoOriginDefImageName = photoOriginDefImageName;
-    _photoOriginDefImage = [UIImage imageNamedFromMyBundle:photoOriginDefImageName];
+    _photoOriginDefImage = [UIImage tz_imageNamedFromMyBundle:photoOriginDefImageName];
 }
 
 - (void)setPhotoOriginSelImageName:(NSString *)photoOriginSelImageName {
     _photoOriginSelImageName = photoOriginSelImageName;
-    _photoOriginSelImage = [UIImage imageNamedFromMyBundle:photoOriginSelImageName];
+    _photoOriginSelImage = [UIImage tz_imageNamedFromMyBundle:photoOriginSelImageName];
 }
 
 - (void)setIconThemeColor:(UIColor *)iconThemeColor {
@@ -761,6 +762,14 @@
     // NSLog(@"%@ dealloc",NSStringFromClass(self.class));
 }
 
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    TZImagePickerController *tzImagePicker = (TZImagePickerController *)self.navigationController;
+    if (tzImagePicker && [tzImagePicker isKindOfClass:[TZImagePickerController class]]) {
+        return tzImagePicker.statusBarStyle;
+    }
+    return [super preferredStatusBarStyle];
+}
+
 #pragma mark - Layout
 
 - (void)viewDidLayoutSubviews {
@@ -813,7 +822,7 @@
 
 @implementation UIImage (MyBundle)
 
-+ (UIImage *)imageNamedFromMyBundle:(NSString *)name {
++ (UIImage *)tz_imageNamedFromMyBundle:(NSString *)name {
     NSBundle *imageBundle = [NSBundle tz_imagePickerBundle];
     name = [name stringByAppendingString:@"@2x"];
     NSString *imagePath = [imageBundle pathForResource:name ofType:@"png"];
@@ -854,6 +863,21 @@
     }
     return infoDict ? infoDict : @{};
 }
+
++ (BOOL)tz_isRightToLeftLayout {
+    if (@available(iOS 9.0, *)) {
+        if ([UIView userInterfaceLayoutDirectionForSemanticContentAttribute:UISemanticContentAttributeUnspecified] == UIUserInterfaceLayoutDirectionRightToLeft) {
+            return YES;
+        }
+    } else {
+        NSString *preferredLanguage = [NSLocale preferredLanguages].firstObject;
+        if ([preferredLanguage hasPrefix:@"ar-"]) {
+            return YES;
+        }
+    }
+    return NO;
+}
+
 @end
 
 
@@ -866,7 +890,7 @@
         if (config == nil) {
             config = [[TZImagePickerConfig alloc] init];
             config.preferredLanguage = nil;
-            config.gifPreviewMaxImagesCount = 200;
+            config.gifPreviewMaxImagesCount = 50;
         }
     });
     return config;
