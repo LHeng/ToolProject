@@ -27,11 +27,11 @@ class PageViewController: LHBaseViewController {
 
         addChildController(childControllers: [vc1,vc2,vc3,vc4,vc5,vc6,vc6,vc7])
 
-        let pageTableView = XXPageTabView.init(childControllers: self.children, childTitles: ["赤","橙","黄","绿","青","蓝","紫"])
-        pageTableView?.frame = CGRect.init(x: 0, y: 0, width: SCREEN_WIDTH, height: SCREEN_HEIGHT)
-        pageTableView?.titleStyle  = .default
-        pageTableView?.indicatorStyle = .default
-        view.addSubview(pageTableView!)
+        let pageTableView:XXPageTabView = XXPageTabView.init(childControllers: self.children, childTitles: ["赤","橙","黄","绿","青","蓝","紫"])
+        pageTableView.frame = CGRect.init(x: 0, y: 0, width: SCREEN_WIDTH, height: SCREEN_HEIGHT)
+        pageTableView.titleStyle  = .default
+        pageTableView.indicatorStyle = .default
+        view.addSubview(pageTableView)
     }
 
     private func makeVCWithColor(color: UIColor) -> UIViewController{
