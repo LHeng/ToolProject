@@ -25,13 +25,7 @@ class PageViewController: LHBaseViewController {
         let vc6 = makeVCWithColor(color: UIColor.blue)
         let vc7 = makeVCWithColor(color: UIColor.purple)
 
-        self.addChild(vc1)
-        self.addChild(vc2)
-        self.addChild(vc3)
-        self.addChild(vc4)
-        self.addChild(vc5)
-        self.addChild(vc6)
-        self.addChild(vc7)
+        addChildController(childControllers: [vc1,vc2,vc3,vc4,vc5,vc6,vc6,vc7])
 
         let pageTableView = XXPageTabView.init(childControllers: self.children, childTitles: ["赤","橙","黄","绿","青","蓝","紫"])
         pageTableView?.frame = CGRect.init(x: 0, y: 0, width: SCREEN_WIDTH, height: SCREEN_HEIGHT)
@@ -44,5 +38,11 @@ class PageViewController: LHBaseViewController {
         let vc = UIViewController()
         vc.view.backgroundColor = color
         return vc
+    }
+
+    private func addChildController(childControllers:[UIViewController]) {
+        for vc in childControllers {
+            self.addChild(vc)
+        }
     }
 }
