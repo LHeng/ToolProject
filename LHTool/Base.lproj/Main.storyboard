@@ -41,8 +41,8 @@
                                 <rect key="frame" x="0.0" y="267.5" width="375" height="43"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zOq-pj-WNe">
-                                        <rect key="frame" x="141.5" y="6.5" width="92" height="30"/>
-                                        <state key="normal" title="成功信息弹框"/>
+                                        <rect key="frame" x="157" y="6.5" width="61" height="30"/>
+                                        <state key="normal" title="SDK运用"/>
                                         <connections>
                                             <action selector="showSuccess:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NlE-Lv-M1E"/>
                                         </connections>
@@ -211,8 +211,8 @@
                                 <rect key="frame" x="0.0" y="420.5" width="375" height="43"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zG3-y9-Pro">
-                                        <rect key="frame" x="141.5" y="6.5" width="92" height="30"/>
-                                        <state key="normal" title="错误信息弹框"/>
+                                        <rect key="frame" x="138.5" y="6.5" width="98" height="30"/>
+                                        <state key="normal" title="PageView展示"/>
                                         <connections>
                                             <action selector="showError:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8xF-ow-IJv"/>
                                         </connections>

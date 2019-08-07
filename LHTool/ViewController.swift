@@ -17,17 +17,17 @@ class ViewController: UIViewController {
         imageQRCode.isHidden = true
         let touch = UITapGestureRecognizer.init(target: self, action: #selector(touchEvent))
         view.addGestureRecognizer(touch)
-        LHCheckVersion.share().isUpdataApp()
     }
 
     private func post() {
 
+        let url = "http://zhanhui-background.phhyzy.com/robot/health/message"
         var param: [String : Any] = [String : Any]()
         param["dataType"] = "bp-msg"
         param["elderCode"] = "OR63854292373"
         param["param"] = "{\"devId\": \"00084bd7\",\"occurTime\": 1547100617645,\"devType\": \"InfraThermo\",\"measureMode\": \"\",\"temperature\": 36.7,\"unit\":\"℃\"}"
 
-        LHRequseTool.requestPost(url: "http://zhanhui-background.phhyzy.com/robot/health/message" ,params: param as NSDictionary , dataArr: NSMutableArray(), success: { (respones) in
+        LHRequseTool.requestPost(url: url, params: param as NSDictionary , dataArr: NSMutableArray(), success: { (respones) in
                 
         }) { (err) in
 
@@ -84,15 +84,21 @@ class ViewController: UIViewController {
     }
     
     @IBAction func showError(_ sender: Any) {
-        post()
-        MBProgressHUD().showError(error: "失败了")
+//        post()
+//        MBProgressHUD().showError(error: "失败了")
+        let vc = PageViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func showSuccess(_ sender: Any) {
-        MBProgressHUD().showSuccess(success: "成功了")
+//        MBProgressHUD().showSuccess(success: "成功了")
+        let vc = SDKDemoViewController()
+//        present(vc, animated: true, completion: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func showMessge(_ sender: Any) {
+        LHCheckVersion.share().isUpdataApp()
         MBProgressHUD().show(text: "你该吃药了", icon: "", vc: view)
     }
     

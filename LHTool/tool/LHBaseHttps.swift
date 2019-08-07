@@ -59,11 +59,11 @@ class LHBaseHttps: NSObject {
         let allParams = self.CombinationParams(params: params)
 
         let headers: HTTPHeaders = [
-            "Accept": "application/json",
+//            "Content-Type": "application/json",
             "Content-Type": "application/x-www-form-urlencoded",
-//            "Accept": "text/javascript",
-//            "Accept": "text/html",
-//            "Accept": "text/plain"
+//            "Content-Type": "text/javascript",
+//            "Content-Type": "text/html",
+//            "Content-Type": "text/plain"
         ]
 
         print(self.getcCompleteUrl(url: url))
