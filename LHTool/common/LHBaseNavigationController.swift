@@ -15,6 +15,7 @@ class LHBaseNavigationController: UINavigationController {
 
         //bar backgroud color
         self.navigationBar.barTintColor = UIColor.orange
+//        self.navigationBar.barStyle = UIBarStyle.black
         //no translucent
         self.navigationBar.isTranslucent = false
         //back button and such
@@ -22,6 +23,12 @@ class LHBaseNavigationController: UINavigationController {
         //title's text color
         self.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
         // Do any additional setup after loading the view.
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+//        navigationBar.shadowImage = UIImage()
+//        navigationBar.setBackgroundImage(UIImage(), for: .default)
     }
 
     override func didReceiveMemoryWarning() {

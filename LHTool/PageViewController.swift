@@ -8,11 +8,12 @@
 
 import UIKit
 
-class PageViewController: LHBaseViewController {
+class PageViewController: LHBaseViewController,LHPageTabeViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         initView()
+        self.view.backgroundColor = UIColor.yellow
         // Do any additional setup after loading the view.
     }
 
@@ -27,13 +28,18 @@ class PageViewController: LHBaseViewController {
 
         addChildController(childControllers: [vc1,vc2,vc3,vc4,vc5,vc6,vc6,vc7])
 
-        let pageTableView:XXPageTabView = XXPageTabView.init(childControllers: self.children, childTitles: ["红","橙","黄","绿","青","蓝","紫"])
+        let pageTableView:LHPageTabeView = LHPageTabeView.init(childControllers: self.children, childTitles: ["红","橙","黄","绿","青","蓝","紫"])
         pageTableView.frame = CGRect.init(x: 0, y: 0, width: SCREEN_WIDTH, height: SCREEN_HEIGHT)
-        pageTableView.titleStyle  = .default
-        pageTableView.indicatorStyle = .default
+        pageTableView.titleStyle = .defaultstyle
+        pageTableView.indicatorStyle = .defaultstyle
+        pageTableView.delegate = self
+        pageTableView.selectedTabIndex = 2
         view.addSubview(pageTableView)
     }
 
+    @objc func pageTabViewDidEndChange() {
+
+    }
     private func makeVCWithColor(color: UIColor) -> UIViewController{
         let vc = UIViewController()
         vc.view.backgroundColor = color
