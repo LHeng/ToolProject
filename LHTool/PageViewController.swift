@@ -30,10 +30,9 @@ class PageViewController: LHBaseViewController,LHPageTabeViewDelegate {
 
         let pageTableView:LHPageTabeView = LHPageTabeView.init(childControllers: self.children, childTitles: ["红","橙","黄","绿","青","蓝","紫"])
         pageTableView.frame = CGRect.init(x: 0, y: 0, width: SCREEN_WIDTH, height: SCREEN_HEIGHT)
-        pageTableView.titleStyle = .defaultstyle
-        pageTableView.indicatorStyle = .defaultstyle
+        pageTableView.titleStyle = .gradient
+        pageTableView.indicatorStyle = .stretch
         pageTableView.delegate = self
-        pageTableView.selectedTabIndex = 2
         view.addSubview(pageTableView)
     }
 
