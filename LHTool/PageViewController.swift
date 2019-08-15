@@ -13,7 +13,6 @@ class PageViewController: LHBaseViewController,LHPageTabeViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         initView()
-        self.view.backgroundColor = UIColor.yellow
         // Do any additional setup after loading the view.
     }
 

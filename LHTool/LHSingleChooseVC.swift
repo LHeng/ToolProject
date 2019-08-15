@@ -44,6 +44,7 @@ extension LHSingleChooseVC : UITableViewDataSource,UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell : LHMyTableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! LHMyTableViewCell
+        cell.selectionStyle = .none
         if isChoose == indexPath.row {
             arr[indexPath.row] = true
         } else {

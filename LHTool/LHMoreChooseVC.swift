@@ -66,6 +66,7 @@ extension LHMoreChooseVC : UITableViewDataSource,UITableViewDelegate {
         cell.myLabel.text = String.init(format: "%ld", indexPath.row)
         cell.isChoose = arr[indexPath.row]
         cell.myButton.tag = indexPath.row
+        cell.selectionStyle = .none
         cell.myBlock = {(choose,index) in
             if choose {
                 self.arr[index] = choose
