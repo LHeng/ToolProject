@@ -126,7 +126,6 @@ class LHPageTabeView: UIView,UIScrollViewDelegate {
     var tabBackgroundColor: UIColor {
         set {
             _tabBackgroundColor  = newValue
-            self.tabView.backgroundColor = _tabBackgroundColor
         }
         get {
             return _tabBackgroundColor
@@ -137,7 +136,6 @@ class LHPageTabeView: UIView,UIScrollViewDelegate {
     var bodyBackgroundColor: UIColor {
         set {
             _bodyBackgroundColor = newValue
-            self.bodyView.backgroundColor = _bodyBackgroundColor
         }
         get {
             return _bodyBackgroundColor
@@ -148,7 +146,6 @@ class LHPageTabeView: UIView,UIScrollViewDelegate {
     var bodyBounces: Bool {
         set {
             _bodyBounces = newValue
-            self.bodyView.bounces = _bodyBounces
         }
         get {
             return _bodyBounces
@@ -164,7 +161,7 @@ class LHPageTabeView: UIView,UIScrollViewDelegate {
             return _titleStyle
         }
     }
-    /*字体渐变，未选择的item的scale，默认是0.8（0~1）。仅XXPageTabTitleStyleScale生效*/
+    /*字体渐变，未选择的item的scale，默认是0.8（0~1）。仅LHPageTabTitleStyleScale生效*/
     var _minScale: CGFloat = kMinScale
     var minScale: CGFloat {
         set {
@@ -187,7 +184,7 @@ class LHPageTabeView: UIView,UIScrollViewDelegate {
     }
     /*下标高度，默认是2.0*/
     var indicatorHeight: CGFloat = kIndicatorHeight
-    /*下标宽度，默认是0。XXPageTabIndicatorStyleFollowText时无效*/
+    /*下标宽度，默认是0。LHPageTabIndicatorStyleFollowText时无效*/
     var indicatorWidth: CGFloat = kIndicatorWidth
 
     //data
@@ -206,7 +203,7 @@ class LHPageTabeView: UIView,UIScrollViewDelegate {
     var  leftItemIndex: Int = 0 //记录滑动时左边的itemIndex
     var  rightItemIndex: Int = 0 //记录滑动时右边的itemIndex
 
-    /*XXPageTabTitleStyleScale*/
+    /*LHPageTabTitleStyleScale*/
     var   selectedColorR: CGFloat = 1.0
     var   selectedColorG: CGFloat = 0.0
     var   selectedColorB: CGFloat = 0.0
@@ -223,7 +220,6 @@ class LHPageTabeView: UIView,UIScrollViewDelegate {
         let tabView = UIScrollView()
         tabView.showsVerticalScrollIndicator = false
         tabView.showsHorizontalScrollIndicator = false
-        tabView.backgroundColor = tabBackgroundColor
         tabView.delegate = self
         tabView.clipsToBounds = true
         return tabView
@@ -236,9 +232,7 @@ class LHPageTabeView: UIView,UIScrollViewDelegate {
         bodyView.showsVerticalScrollIndicator = false
         bodyView.showsHorizontalScrollIndicator = false
         bodyView.delegate = self
-        bodyView.bounces = bodyBounces
         bodyView.contentInsetAdjustmentBehavior = UIScrollView.ContentInsetAdjustmentBehavior.never
-        bodyView.backgroundColor = bodyBackgroundColor
         return bodyView
     }()
 
@@ -281,6 +275,8 @@ class LHPageTabeView: UIView,UIScrollViewDelegate {
 
             self.tabView.frame = CGRect.init(x: 0, y: 0, width: tabSize.width, height: tabSize.height)
             self.tabView.contentSize = CGSize.init(width: tabItemWidth*CGFloat(numberOfTabItems), height: 0)
+            self.tabView.backgroundColor = tabBackgroundColor
+
 
             for i in 0..<tabItems.count {
                 let tabItem = tabItems[i]
@@ -292,6 +288,9 @@ class LHPageTabeView: UIView,UIScrollViewDelegate {
             self.bodyView.frame = CGRect.init(x: 0, y: tabSize.height, width: WIDTH(view: self), height: HEIGHT(view: self)-tabSize.height)
             self.bodyView.contentSize = CGSize.init(width: SCREEN_WIDTH*CGFloat(numberOfTabItems), height: 0)
             self.bodyView.contentOffset = CGPoint.init(x: SCREEN_WIDTH*CGFloat(selectedTabIndex), y: 0)
+            self.bodyView.backgroundColor = bodyBackgroundColor
+            self.bodyView.bounces = bodyBounces
+
             reviseTabContentOffsetBySelectedIndex(isAnimate: false)
 
             for i in 0..<childControllers.count {
