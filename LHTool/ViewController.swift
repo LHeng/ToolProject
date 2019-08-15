@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        LHCheckVersion.share().isUpdataApp()
         imageQRCode.isHidden = true
         let touch = UITapGestureRecognizer.init(target: self, action: #selector(touchEvent))
         view.addGestureRecognizer(touch)
@@ -92,13 +93,12 @@ class ViewController: UIViewController {
     
     @IBAction func showSuccess(_ sender: Any) {
 //        MBProgressHUD().showSuccess(success: "成功了")
-        let vc = SDKDemoViewController()
 //        present(vc, animated: true, completion: nil)
+        let vc = SDKDemoViewController()
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func showMessge(_ sender: Any) {
-        LHCheckVersion.share().isUpdataApp()
         MBProgressHUD().show(text: "你该吃药了", icon: "", vc: view)
     }
     
@@ -125,6 +125,7 @@ class ViewController: UIViewController {
         }
         self.navigationController?.pushViewController(VC, animated: true)
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
