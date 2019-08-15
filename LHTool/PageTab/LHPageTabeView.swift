@@ -363,13 +363,13 @@ class LHPageTabeView: UIView,UIScrollViewDelegate {
 
         var reviseX: CGFloat
         if(selectedItemCenterX + tabSize.width/2.0 >= self.tabView.contentSize.width) {
-            reviseX = tabView.contentSize.width - tabSize.width; //不足以到中心，靠右
+            reviseX = tabView.contentSize.width - tabSize.width //不足以到中心，靠右
         } else if(selectedItemCenterX - tabSize.width/2.0 <= 0) {
-            reviseX = 0; //不足以到中心，靠左
+            reviseX = 0 //不足以到中心，靠左
         } else {
-            reviseX = selectedItemCenterX - tabSize.width/2.0; //修正至中心
+            reviseX = selectedItemCenterX - tabSize.width/2.0 //修正至中心
         }
-        //如果前后没有偏移量差，setContentOffset实际不起作用；或者没有动画效果
+        //如果前后没有偏移量差，setContentOffset实际不起作用,或者没有动画效果
         if(abs(tabView.contentOffset.x - reviseX) < 1 || !isAnimate) {
             finishReviseTabContentOffset()
         }
