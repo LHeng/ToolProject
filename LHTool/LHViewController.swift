@@ -15,7 +15,7 @@ class LHViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         LHCheckVersion.share().isUpdataApp()
-//        imageQRCode.isHidden = true
+        imageQRCode.isHidden = true
         let touch = UITapGestureRecognizer.init(target: self, action: #selector(touchEvent))
         view.addGestureRecognizer(touch)
     }
@@ -85,15 +85,13 @@ class LHViewController: UIViewController {
     }
     
     @IBAction func showError(_ sender: Any) {
-//        post()
 //        MBProgressHUD().showError(error: "失败了")
-        let vc = PageViewController()
-        self.navigationController?.pushViewController(vc, animated: true)
+        let vc = TabBarViewController()
+        self.present(vc, animated: true, completion: nil)
     }
     
     @IBAction func showSuccess(_ sender: Any) {
-//        MBProgressHUD().showSuccess(success: "成功了")
-//        present(vc, animated: true, completion: nil)
+        MBProgressHUD().showSuccess(success: "成功了")
         let vc = SDKDemoViewController()
         self.navigationController?.pushViewController(vc, animated: true)
     }

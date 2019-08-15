@@ -13,7 +13,7 @@
         <!--演示Demo-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LHTool" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LHViewController" customModule="LHTool" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -211,8 +211,8 @@
                                 <rect key="frame" x="0.0" y="420.5" width="375" height="43"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zG3-y9-Pro">
-                                        <rect key="frame" x="138.5" y="6.5" width="98" height="30"/>
-                                        <state key="normal" title="PageView展示"/>
+                                        <rect key="frame" x="148.5" y="6.5" width="78" height="30"/>
+                                        <state key="normal" title="Tabbar展示"/>
                                         <connections>
                                             <action selector="showError:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8xF-ow-IJv"/>
                                         </connections>

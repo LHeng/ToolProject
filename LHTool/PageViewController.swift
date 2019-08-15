@@ -8,10 +8,11 @@
 
 import UIKit
 
-class PageViewController: LHBaseViewController,LHPageTabeViewDelegate {
+class PageViewController: UIViewController,LHPageTabeViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "彩虹"
         initView()
         // Do any additional setup after loading the view.
     }

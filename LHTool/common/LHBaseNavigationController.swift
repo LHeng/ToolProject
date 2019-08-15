@@ -14,14 +14,14 @@ class LHBaseNavigationController: UINavigationController {
         super.viewDidLoad()
 
         //bar backgroud color
-        self.navigationBar.barTintColor = UIColor.orange
+        self.navigationBar.barTintColor = UIColor.white
 //        self.navigationBar.barStyle = UIBarStyle.black
         //no translucent
         self.navigationBar.isTranslucent = false
         //back button and such
-        self.navigationBar.tintColor = UIColor.white
+        self.navigationBar.tintColor = UIColor.black
         //title's text color
-        self.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
+        self.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.black]
         // Do any additional setup after loading the view.
     }
 
