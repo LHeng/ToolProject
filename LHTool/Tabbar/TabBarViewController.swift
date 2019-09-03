@@ -36,7 +36,7 @@ class TabBarViewController: MyTabBarController,MyTarBarControllerDelegate {
         myTabBar.centerBtn.isSelected = true
         self.myTabBar.centerBtn.layer.removeAllAnimations()
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpTabbar()
@@ -76,3 +76,4 @@ class TabBarViewController: MyTabBarController,MyTarBarControllerDelegate {
         self.viewControllers = [vc1,vc2,vc3,vc4,vc5]
     }
 }
+

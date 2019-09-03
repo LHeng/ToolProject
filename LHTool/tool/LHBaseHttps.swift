@@ -59,11 +59,11 @@ class LHBaseHttps: NSObject {
         let allParams = self.CombinationParams(params: params)
 
         let headers: HTTPHeaders = [
-//            "Content-Type": "application/json",
-            "Content-Type": "application/x-www-form-urlencoded",
-//            "Content-Type": "text/javascript",
-//            "Content-Type": "text/html",
-//            "Content-Type": "text/plain"
+            //            "Content-Type": "application/json",
+            "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
+            //            "Content-Type": "text/javascript",
+            //            "Content-Type": "text/html",
+            //            "Content-Type": "text/plain"
         ]
 
         print(self.getcCompleteUrl(url: url))
@@ -78,21 +78,21 @@ class LHBaseHttps: NSObject {
             case .success(let value):
                 print(value)
                 let dic:NSDictionary = value as! NSDictionary
-//                let status:NSNumber = dic.object(forKey:"rc") as! NSNumber
-//                if status.isEqual(to: NSNumber.init(value: -1)) {
-//                    //返回错误码
-//                    success(dic.object(forKey: "msg") as AnyObject)
-//                } else {
-//                    let resultData:String = dic.object(forKey: "result") as! String
-//                    //base64解码
-//                    let decodedData = NSData.init(base64Encoded: resultData, options: NSData.Base64DecodingOptions.init(rawValue: 0))
-//
-//                    let decodedString:NSString = NSString(data: decodedData! as Data, encoding: String.Encoding.utf8.rawValue)!
-//                    //解析json字符串
-//                    let data:Data = decodedString.data(using: String.Encoding.utf8.rawValue)!
-//                    let resultDic = try! JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers)
-//                    success(resultDic)
-//                                }
+                //                let status:NSNumber = dic.object(forKey:"rc") as! NSNumber
+                //                if status.isEqual(to: NSNumber.init(value: -1)) {
+                //                    //返回错误码
+                //                    success(dic.object(forKey: "msg") as AnyObject)
+                //                } else {
+                //                    let resultData:String = dic.object(forKey: "result") as! String
+                //                    //base64解码
+                //                    let decodedData = NSData.init(base64Encoded: resultData, options: NSData.Base64DecodingOptions.init(rawValue: 0))
+                //
+                //                    let decodedString:NSString = NSString(data: decodedData! as Data, encoding: String.Encoding.utf8.rawValue)!
+                //                    //解析json字符串
+                //                    let data:Data = decodedString.data(using: String.Encoding.utf8.rawValue)!
+                //                    let resultDic = try! JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers)
+                //                    success(resultDic)
+                //                                }
 
                 let response = Response()
                 response.rc = dic["rc"] as? String
@@ -100,9 +100,9 @@ class LHBaseHttps: NSObject {
                 response.result = dic["result"] as? String
                 if(response.rc == "0") {
                     success(response.result)
-                    } else {
+                } else {
                     MBProgressHUD().showError(error: response.msg!)
-                    }
+                }
                 break
             case .failure(let error):
                 failure(error)
@@ -214,5 +214,6 @@ class LHBaseHttps: NSObject {
     }
 
 }
+
 
 

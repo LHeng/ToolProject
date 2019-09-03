@@ -91,6 +91,7 @@ class LHViewController: UIViewController {
     }
     
     @IBAction func showSuccess(_ sender: Any) {
+        post()
         MBProgressHUD().showSuccess(success: "成功了")
         let vc = SDKDemoViewController()
         self.navigationController?.pushViewController(vc, animated: true)
