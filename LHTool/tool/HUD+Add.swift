@@ -63,7 +63,7 @@ extension MBProgressHUD  {
     /// 显示错误信息
     ///
     /// - Parameters:
-    ///   - success: 信息内容
+    ///   - error: 信息内容
     ///   - vc: 显示信息的视图
     func showErrpr(error: String, vc: UIView) {
         MBProgressHUD().hideHUD()
